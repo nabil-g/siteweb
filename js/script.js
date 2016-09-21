@@ -34,7 +34,7 @@ $(document).ready(function() {
 		$("#button3").addClass("actif");
 		$("span").css("display","none");
 		$("#three").fadeIn("slow");
-		$(".rubrique").animate({height:"307px"});
+		$(".rubrique").animate({height:"365px"});
 		$("#three").css("display","block");
 	});
 	$("#button4").click(function() {

@@ -91,6 +91,11 @@
 					</br>
 					<table class="verticaltimeline">
 						<tr>
+							<td class="date">2016/2017</td>
+							<td><strong>Formation CODA by Simplon</strong></br>
+								<em>AFPA, Alès</em></td>
+						</tr>
+						<tr>
 							<td class="date">2014/2015</td>
 							<td><strong>Licence Pro Management des collectivités
 								territoriales</strong> </br>(formation uniquement)</br>
