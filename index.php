@@ -4,7 +4,7 @@
 	<head>
 		<title>Site de Nabil Ghedjati</title>
 
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="http://weloveiconfonts.com/api/?family=entypo">

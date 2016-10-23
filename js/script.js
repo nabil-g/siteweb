@@ -11,16 +11,11 @@ $(document).ready(function() {
 		$('#grandTitre').fadeOut('fast', function(){
 			$('#entrance').fadeOut('slow', function(){
 				$('#navbar').slideDown('slow','swing',function(){
-					$('.rubrique').fadeIn('slow');
+					$('.rubrique').slideDown('slow',"swing");
 				});
 			});
 		});
-
-
 	});
-
-
-
 
 
 

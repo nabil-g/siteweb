@@ -17,11 +17,19 @@
     color: white;
   }
 
+  /*Corps du site, arrière-plan, police générale*/
+  body{
+  	background: no-repeat url("clouds2.jpg") fixed;
+    background-size: cover;
+  	font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+  }
+
   #entrance{
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 1);
     z-index: 10000;
   }
 
@@ -57,27 +65,20 @@
 
   }
 
-  #grandTitre a, #petitTitre a{
-  	color: #B0FAFF;
+  #grandTitre a, #petitTitre a, #navbar #button0{
+  	color: #D180C0;
   	transition: all 0.5s;
   }
 
-  #grandTitre a:hover, #petitTitre a{
-  	color: #D180C0;
+  #grandTitre a:hover, #petitTitre a,  #navbar #button0{
+  	color:  #B0FAFF ;
   }
 
-#petitTitre{
-  display: none;
-}
-
-
-  /*Corps du site, arrière-plan, police générale*/
-  body{
-  	background: no-repeat url("clouds2.jpg") fixed;
-    background-size: cover;
-  	font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+  #petitTitre{
+    display: none;
   }
+
+
 
   /*Marges intérieures des cellules du tableau invisible */
   th,td{
@@ -172,8 +173,8 @@
     /*display: flex;
     justify-content: space-between;;
     align-items: center;*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: none;
-
   }
 
   .rubrique:before{
@@ -193,8 +194,14 @@
     z-index: -1;
   }
 
-  .rubrique div{
+  #one, #two, #three, #four, #five, #six{
     display: none;
+  }
+
+  .rubrique div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: auto;
   }
 
@@ -217,7 +224,7 @@
     color: white;
     font-weight: bold;
     animation: anim1 5s infinite;
-    padding: 5px;
+    padding: 5px 20px;
   }
 
   @keyframes anim1 {
