@@ -37,7 +37,7 @@
 
 			<header>
 				<nav>
-		    	<ul id="navbar">
+		    	<ul id="navlist">
 						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
 						<li><a id="button1" href="#">Compétences</a></li>
 						<li><a id="button2" href="#">Expérience</a></li>

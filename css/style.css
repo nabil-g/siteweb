@@ -65,12 +65,12 @@
 
   }
 
-  #grandTitre a, #petitTitre a, #navbar #button0{
+  #grandTitre a, #petitTitre a, #navlist #button0{
   	color: #D180C0;
   	transition: all 0.5s;
   }
 
-  #grandTitre a:hover, #petitTitre a,  #navbar #button0{
+  #grandTitre a:hover, #petitTitre a,  #navlist #button0{
   	color:  #B0FAFF ;
   }
 
@@ -113,13 +113,13 @@
   }
 
   /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
-  #navbar{
+  #navlist{
   	list-style-type: none;
   	overflow: hidden ;
     display: none;
   }
 
-  #navbar li #button0{
+  #navlist li #button0{
     font-family: 'Satisfy', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
@@ -136,7 +136,7 @@
   }
 
   /*Liens de la barre de navigation et liens du paragraphe*/
-  #navbar li a{
+  #navlist li a{
   	display: inline-block;
   	text-align:center;
   	padding: 12px 14px;
@@ -146,7 +146,7 @@
   }
 
 
-  #navbar .actif {
+  #navlist .actif {
     color: white;
     transition-duration: 0.5s;
     background: rgba(0,0,0,.5);
@@ -154,7 +154,7 @@
     border-bottom-right-radius: 7px;
   }
 
-  #navbar li a:hover{
+  #navlist li a:hover{
     color:white;
   }
 
