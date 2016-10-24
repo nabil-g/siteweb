@@ -10,13 +10,14 @@
 		<link rel="stylesheet" type="text/css" href="http://weloveiconfonts.com/api/?family=entypo">
 		<link rel="icon" type="image/png" href="pict/favicon.png"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<!-- <link type="text/css" rel="stylesheet" href="css/mobile.css"/> -->
+		<link type="text/css" rel="stylesheet" href="css/mobile.css"/>
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/googleanalytics.js"></script>
 	</head>
 
@@ -37,7 +38,7 @@
 
 			<header>
 				<nav>
-		    	<ul id="navlist">
+		    	<ul id="navbar">
 						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
 						<li><a id="button1" href="#">Compétences</a></li>
 						<li><a id="button2" href="#">Expérience</a></li>
@@ -172,7 +173,7 @@
 							 </td>
 							</tr>
 						</table>
-						<p class="credits">Ce site a été entièrement codé par moi-même.</br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.   <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
+						<p class="credits">Ce site a été entièrement codé par moi-même.</br></br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.   <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
 				</div>
 
 				<!-- DIV MENTIONS -->
@@ -187,8 +188,8 @@
 						</br>The PHP logo is Copyright &copy; 2001-<?php echo date("Y"); ?> the PHP Group. All rights reserved.
 						</br>The jQuery logo is Copyright &copy; <?php echo date("Y"); ?> The jQuery Foundation.
 						</br>Crédits photo :<a href="https://unsplash.com/photos/Y1ByvAGQ5iE" target="_blank">Unsplash.com</a>
-
-					</br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.
+						</br>
+						</br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.
 					</p>
 				</div>
 
@@ -197,15 +198,19 @@
 				<div id="six">
 					<h2>Contact</h2>
 
-						<form id="form" name="contactform" action="php/contact.php" accept-charset="UTF-8" method="POST" >
-							<input type="text" id="name" name="name" placeholder="Votre nom" autofocus required >
-							<input type="email" id="mailaddress" name="mailaddress" placeholder="Votre adresse e-mail" required >
-							<textarea id="message" type="text" name="message" rows="6" placeholder="Votre message" required ></textarea>
+						<form id="form" name="contactform" action="php/contact.php" accept-charset="UTF-8" method="POST" onsubmit="return verifForm(this)" >
+							<input type="text" id="name" name="name" placeholder="Votre nom" autofocus  >
+							<input type="email" id="mailaddress" name="mailaddress" placeholder="Votre adresse e-mail"  >
+							<textarea id="message" type="text" name="message" rows="6" placeholder="Votre message (entre 2 et 1500 caractères)"  ></textarea>
+							<p id="erreurForm">
+								Les champs marqués en rouge sont incomplets ou incorrects.
+							</p>
+							<p id="okForm"></p>
 							<button id="sendbutton" type="submit" name="send">Envoyer</button>
 						</form>
 
 					<p class="credits">
-						</br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.
+						&copy; <?php echo date("Y"); ?> Nabil Ghedjati.
 					</p>
 					</div>
 

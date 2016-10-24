@@ -65,13 +65,13 @@
 
   }
 
-  #grandTitre a, #petitTitre a, #navlist #button0{
+  #grandTitre a, #petitTitre a{
   	color: #D180C0;
   	transition: all 0.5s;
   }
 
-  #grandTitre a:hover, #petitTitre a,  #navlist #button0{
-  	color:  #B0FAFF ;
+  #grandTitre a:hover, #petitTitre a{
+  	color: #B0FAFF;
   }
 
   #petitTitre{
@@ -96,8 +96,7 @@
   }
 
   #arduinologo{
-    width: 12%;
-    background-color: white;
+    width: 76px;
   }
 
   #JSlogo{
@@ -113,17 +112,22 @@
   }
 
   /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
-  #navlist{
+  #navbar{
   	list-style-type: none;
   	overflow: hidden ;
     display: none;
   }
 
-  #navlist li #button0{
+  #navbar li #button0{
     font-family: 'Satisfy', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
-    color: white;
+    color: #B0FAFF;
+    transition: all 0.5s;
+  }
+
+  #navbar li #button0:hover{
+    color: #D180C0;
   }
 
   /*Elements de navigation sous forme de liste*/
@@ -136,7 +140,7 @@
   }
 
   /*Liens de la barre de navigation et liens du paragraphe*/
-  #navlist li a{
+  #navbar li a{
   	display: inline-block;
   	text-align:center;
   	padding: 12px 14px;
@@ -146,7 +150,7 @@
   }
 
 
-  #navlist .actif {
+  #navbar .actif {
     color: white;
     transition-duration: 0.5s;
     background: rgba(0,0,0,.5);
@@ -154,14 +158,14 @@
     border-bottom-right-radius: 7px;
   }
 
-  #navlist li a:hover{
+  #navbar li a:hover{
     color:white;
   }
 
   .rubrique{
     position:relative;
-    padding:20px;
-    height:200px;
+    padding:70px;
+    height:270px;
     width:960px;
     border-radius: 10px;
     margin: auto;
@@ -198,12 +202,23 @@
     display: none;
   }
 
-  .rubrique div{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
+  /*C'est pour espacer chaque element des div sauf le dernier*/
+  .rubrique div *:not(:last-child){
+    margin-bottom: 13px;
   }
+
+  .rubrique div * {
+    margin: auto;
+    text-align: center;
+  }
+
+  .logoSkills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+
 
   #welcome{
     display: block;
@@ -216,7 +231,6 @@
 
 
   #downloadlink{
-
     text-decoration: none;
     text-align: center;
     background-color: blue;
@@ -224,7 +238,13 @@
     color: white;
     font-weight: bold;
     animation: anim1 5s infinite;
-    padding: 5px 20px;
+    padding: 8px 25px;
+    margin-top: 10px;
+    transition: all 0.5s;
+  }
+
+  #downloadlink:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   @keyframes anim1 {
@@ -251,18 +271,37 @@
     background-color: rgba(0,0,0,.1);
     color: black;
     border: 0px;
-    margin: 10px;
-    padding-left: 4px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding: 5px;
     font-family: 'Raleway', sans-serif;
+    font-size: 1em;
     width: 310px;
     resize: none;
     font-size: 0.90em;
+    transition: all 0.8s;
+    text-align: left;
+  }
+
+  textarea{
+    height: 200px;
   }
 
   input{
-    height: 20px;
+    height: 30px;
+  }
+
+  input:focus, textarea:focus{
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #erreurForm{
+    /*opacity: 0;*/
+    display: none;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+
+  #okForm{
+    height: 17px;
   }
 
   #sendbutton{
@@ -281,6 +320,7 @@
 
   #sendbutton:hover{
     background-color: #009999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   #sendbutton:focus{
