@@ -171,7 +171,7 @@
     margin: auto;
     margin-top: 17vh;
     /*display: block;*/
-  	background: rgba(0,0,0,.4);
+  	background: rgba(19,85,104,.4);
   	color:white;
     text-align: center;
     /*display: flex;
@@ -250,13 +250,13 @@
   @keyframes anim1 {
       from {
 
-          background: blue;
+          background: #61AFFC;
       }
       50%  {
           background: #009999;
       }
       to   {
-          background: blue;
+          background: #61AFFC;
       }
   }
 
