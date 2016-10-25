@@ -67,7 +67,7 @@ $(document).ready(function() {
 		$("div").css("display","none");
 		$("#six").fadeIn("slow");
 		$(".rubrique").animate({height:"480px",padding:"30px"});
-		$("#six form").css({"display":"flex","flex-direction":"column"});
+		$("#six form").css({"display":"flex","flex-direction":"column","align-items":"flex-start"});
 	});
 
 

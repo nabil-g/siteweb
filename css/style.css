@@ -209,7 +209,6 @@
 
   .rubrique div * {
     margin: auto;
-    text-align: center;
   }
 
   .logoSkills{
@@ -278,7 +277,6 @@
     resize: none;
     font-size: 0.90em;
     transition: all 0.8s;
-    text-align: left;
   }
 
   textarea{
