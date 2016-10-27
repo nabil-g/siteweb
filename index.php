@@ -27,7 +27,7 @@
 
 		<section id="entrance">
 			<h1 id="grandTitre"><a href="#">Nabil Ghedjati</a></h1>
-			<h2 id="petitTitre">Bienvenue !</h2>
+			<!-- <h2 id="petitTitre">Bienvenue !</h2> -->
 		</section>
 
 
@@ -44,12 +44,16 @@
 						<li><a id="button2" href="#">Expérience</a></li>
 						<li><a id="button3" href="#">Formation</a></li>
 
-						<li class="right" id="mail"><a title="Contact" class="entypo-mail" href="#"></a></li>
-						<li class="right" id="twitter"><a title="Twitter" class="entypo-twitter" href="https://twitter.com/Nabil63" target="_blank"></a></li>
-				    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
-				    <li class="right" id="linkedin"><a title="LinkedIn" class="entypo-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
-				    <li class="right" id="github"><a title="GitHub" class="entypo-github" href="https://github.com/nabil-g" target="_blank"></a></li>
-						<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
+						<span id="social">
+							<li class="right" id="mail"><a title="Contact" class="entypo-mail" href="#"></a></li>
+							<li class="right" id="twitter"><a title="Twitter" class="entypo-twitter" href="https://twitter.com/Nabil63" target="_blank"></a></li>
+					    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
+					    <li class="right" id="linkedin"><a title="LinkedIn" class="entypo-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
+					    <li class="right" id="github"><a title="GitHub" class="entypo-github" href="https://github.com/nabil-g" target="_blank"></a></li>
+							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
+						</span>
+
+						<li id="menu" class="entypo-dot-3"></li>
 					</ul>
 				</nav>
 			</header>

@@ -1,4 +1,4 @@
-//Utilisation de JS pur
+//Utilisation de JS pur (et un peu de jQuery)
 
 
 //Création d'une fonction qui permettra de colorier les champs du formulaire non ou mal remplis
@@ -69,6 +69,8 @@ function verifMsg(champ)
 }
 
 
+
+
 //Création d'une grande fonction qui vérifie que toutes les autres fonctions de vérification renvoient bien true, afin de valider le formulaire.
 function verifForm(f) //le paramètre f, sera remplacé à l'exécution par le mot-clé this, qui permettra de séléctionner le bon champ du formulaire et l'appliquer à la bonne formule.
 {
@@ -83,6 +85,7 @@ function verifForm(f) //le paramètre f, sera remplacé à l'exécution par le m
 		// $('#erreurForm').css("opacity","0");
     $('#erreurForm').fadeOut();
     $('#okForm').show();
+		
 	}
 	else
 	{

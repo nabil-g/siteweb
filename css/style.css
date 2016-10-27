@@ -74,11 +74,11 @@
   	color: #B0FAFF;
   }
 
-  #petitTitre{
+
+
+  #menu{
     display: none;
   }
-
-
 
   /*Marges intérieures des cellules du tableau invisible */
   th,td{
@@ -171,7 +171,8 @@
     margin: auto;
     margin-top: 17vh;
     /*display: block;*/
-  	background: rgba(19,85,104,.4);
+  	/*background: rgba(19,85,104,.4);*/
+    background: rgba(0, 0, 0, 0.4);
   	color:white;
     text-align: center;
     /*display: flex;
@@ -277,6 +278,7 @@
     resize: none;
     font-size: 0.90em;
     transition: all 0.8s;
+    
   }
 
   textarea{
