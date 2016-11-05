@@ -4,13 +4,14 @@
 	<head>
 		<title>Site de Nabil Ghedjati</title>
 
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="http://weloveiconfonts.com/api/?family=entypo">
 		<link rel="icon" type="image/png" href="../pict/favicon.png"/>
 		<link type="text/css" rel="stylesheet" href="../css/style.css"/>
-		<!-- <link type="text/css" rel="stylesheet" href="../css/mobile.css"/> -->
+		<link type="text/css" rel="stylesheet" href="../css/mobile.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/style_c.css">
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no>
@@ -92,12 +93,12 @@
 										));
 
 									// On affiche un message.
-									echo "Merci pour votre message $name_us !</br>";
+									echo "Merci pour votre message $name_us !</br></br>";
 									echo "<a href='../index.php'> < Retour</a>";
 								}
 								else{
 									// S'il n'y a pas de variables de formulaire, on affiche un message d'erreur.
-									echo "Vous n'avez pas renseigné votre nom, votre adresse e-mail ou votre message !</br>";
+									echo "Vous n'avez pas renseigné votre nom, votre adresse e-mail ou votre message !</br></br>";
 									echo "<a href='../index.php'> < Retour</a>";
 								}
 

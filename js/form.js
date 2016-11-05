@@ -1,5 +1,23 @@
 //Utilisation de JS pur (et un peu de jQuery)
 
+// Déclaration d'une fonction d'envoi en utilisant ajax
+function envoi(cible) {
+	$.ajax({
+		method: 'POST', // On indique le type de requete http
+		url: 'php/contact_bis.php', // l'adresse de la page de réception
+		data: $(cible).serialize(), // on sérialise toutes les données entrées dans le formulaire pour les envoyer
+		success: function(data) { // en cas de succés
+			$('.sixbloc form').hide();
+			$('.sixbloc').prepend(data); // on remplace le formulaire par les données reçues
+			$('#reponseMsg').fadeIn();
+			$(".rubrique").animate({height:"250px",padding:"30px"});
+		},
+		error: function(){ // en cas d'erreur
+			alert('La requête n\'a pas abouti !');
+		}
+	});
+}
+
 
 //Création d'une fonction qui permettra de colorier les champs du formulaire non ou mal remplis
 	//si erreur vaut true,on colorise l'arrière-plan du champ concerné entré en parametre en rouge
@@ -8,14 +26,9 @@ function surligne(champ, erreur)
 	if (erreur)
 		champ.style.backgroundColor = "rgba(255,8,8,0.25)";
 
-
 	else
 		champ.style.backgroundColor = "";
-
 }
-
-
-
 
 //Création d'une fonction qui permet de vérifier la longueur du nom de l'utilisateur
 	// Si la longueur de la donnée du champ nom est inférieur à 2 caractères ou supérieur à 50
@@ -32,7 +45,6 @@ function verifNom(champ)
 		return true;
 	}
 }
-
 
 //Création d'une fonction qui permet de vérifier que l'adresse e-mail satisfait bien le REGEX de vérification e-mail
 function verifMail(champ)
@@ -52,7 +64,6 @@ function verifMail(champ)
 
 }
 
-
 //Création d'une fonction qui permet de vérifier que le texte du message soit compris entre 2 et 1500 caractères.
 function verifMsg(champ)
 {
@@ -68,9 +79,6 @@ function verifMsg(champ)
 	}
 }
 
-
-
-
 //Création d'une grande fonction qui vérifie que toutes les autres fonctions de vérification renvoient bien true, afin de valider le formulaire.
 function verifForm(f) //le paramètre f, sera remplacé à l'exécution par le mot-clé this, qui permettra de séléctionner le bon champ du formulaire et l'appliquer à la bonne formule.
 {
@@ -81,11 +89,16 @@ function verifForm(f) //le paramètre f, sera remplacé à l'exécution par le m
 	//On vérifie ensuite que toutes ces fonctions ont renvoyé true
 	if(nomOk && mailOk && msgOk)
 	{
+
+
+		event.preventDefault(); // On empeche la transmission classique du formulaire
+		envoi(f); // on exécute la fonction d'envoi créée tout en haut
 		return true;
 		// $('#erreurForm').css("opacity","0");
     $('#erreurForm').fadeOut();
     $('#okForm').show();
-		
+
+
 	}
 	else
 	{
