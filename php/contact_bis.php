@@ -50,15 +50,15 @@
 
             //On prépare la requete d'insertion avant de lui insérer les variables de l'utilisateur (afin d'eviter des injections SQL).
             $req = $bdd_sitenab->prepare('INSERT INTO messages(nom, adressemail, message, date_m, heure_m, adresseip, navigateur)
-              VALUES(:nom, :adressemail, :message, :date_m, :heure_m, :adresseip, :navigateur)');
+              VALUES(:nom, :adressemail, :message, CURDATE(), CURTIME(), :adresseip, :navigateur)');
 
             //On exécute la requete avec les variables "nettoyées" des éventuelles injections SQL.
             $req->execute(array(
               'nom' => $name_us,
               'adressemail' => $address_us,
               'message' => $msg_us,
-              'date_m' => date("Y-m-d"),
-              'heure_m' => date("H:i:s"),
+              // 'date_m' => date("Y-m-d"),
+              // 'heure_m' => date("H:i:s"),
               'adresseip' => $adresseip,
               'navigateur' => $nav
               ));
