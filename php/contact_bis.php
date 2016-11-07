@@ -27,8 +27,9 @@
           $msg_us = strip_tags($_POST['message']);
           //On enregistre dans une variable la valeur de l'array superglobale $_SERVER correspondant au caractéristiques du navigateur de l'utilisateur.
           $nav = $_SERVER['HTTP_USER_AGENT'];
-
           $adresseip = $_SERVER['REMOTE_ADDR'];
+
+
 
           // VERIFICATION DU QUOTA D'ENVOI DE MESSAGES
 

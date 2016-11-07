@@ -79,7 +79,7 @@ $(document).ready(function() {
 		$("#six, .sixbloc").fadeIn("slow");
 		$(".rubrique").animate({height:"480px",padding:"30px"});
 		$(".sixbloc form").css({"display":"flex","flex-direction":"column"}).show(); // Je fais apparaitre le formulaire s'il a été masqué par une réponse ajax
-		// $(".sixbloc form").reset();
+		// $("form input").val("");
 		$('#reponseMsg').hide(); // je masque l'éventuelle réponse ajax affichée
 		neutreForm();
 
