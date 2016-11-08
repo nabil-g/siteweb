@@ -95,7 +95,6 @@ function verifForm(f) //le paramètre f, sera remplacé à l'exécution par le m
 		event.preventDefault(); // On empeche la transmission classique du formulaire
 		envoi(f); // on exécute la fonction d'envoi créée tout en haut
 		return true;
-		// $('#erreurForm').css("opacity","0");
     $('#erreurForm').fadeOut();
     $('#okForm').show();
 
@@ -103,7 +102,6 @@ function verifForm(f) //le paramètre f, sera remplacé à l'exécution par le m
 	}
 	else
 	{
-		// $('#erreurForm').css("opacity","1");
     $('#erreurForm').fadeIn();
     $('#okForm').hide();
 		return false;
