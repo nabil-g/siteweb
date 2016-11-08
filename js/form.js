@@ -13,8 +13,8 @@ function envoi(cible) {
 			$(".rubrique").animate({height:"250px",padding:"30px"});
 		},
 		error: function(){ // en cas d'erreur
-		$('.sixbloc form').hide();
-		$('.sixbloc').prepend('La requête n\'a pas abouti !');
+
+		alert('La requête n\'a pas abouti !');
 		}
 	});
 }
