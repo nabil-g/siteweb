@@ -14,7 +14,7 @@ function envoi(cible) {
 		},
 		error: function(){ // en cas d'erreur
 
-		alert('La requête n\'a pas abouti !');
+		alert('La requête n\'a pas aboutie !');
 		}
 	});
 }
