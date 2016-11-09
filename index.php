@@ -38,13 +38,14 @@
 
 			<header>
 				<nav>
-		    	<ul id="navbar">
-						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
-						<li><a id="button1" href="#">Compétences</a></li>
-						<li><a id="button2" href="#">Expérience</a></li>
-						<li><a id="button3" href="#">Formation</a></li>
+		    	<ul class="navbar">
+						<span  id="social">
+							<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
+							<li><a id="button1" href="#">Compétences</a></li>
+							<li><a id="button2" href="#">Expérience</a></li>
+							<li><a id="button3" href="#">Formation</a></li>
 
-						<span id="social">
+
 							<li class="right" id="mail"><a title="Contact" class="entypo-mail" href="#"></a></li>
 							<li class="right" id="twitter"><a title="Twitter" class="entypo-twitter" href="https://twitter.com/Nabil63" target="_blank"></a></li>
 					    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
@@ -53,6 +54,9 @@
 							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
 						</span>
 
+
+					</ul>
+					<ul class="navbar">
 						<li id="menu" class="entypo-dot-3"></li>
 					</ul>
 				</nav>

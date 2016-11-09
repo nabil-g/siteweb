@@ -114,13 +114,13 @@
   }
 
   /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
-  #navbar{
+  .navbar{
   	list-style-type: none;
   	overflow: hidden ;
     display: none;
   }
 
-  #navbar li #button0{
+  .navbar li #button0{
     font-family: 'Satisfy', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
@@ -128,7 +128,7 @@
     transition: all 0.5s;
   }
 
-  #navbar li #button0:hover{
+  .navbar li #button0:hover{
     color: #D180C0;
   }
 
@@ -142,7 +142,7 @@
   }
 
   /*Liens de la barre de navigation et liens du paragraphe*/
-  #navbar li a{
+  .navbar li a{
   	display: inline-block;
   	text-align:center;
   	padding: 12px 14px;
@@ -152,7 +152,7 @@
   }
 
 
-  #navbar .actif {
+  .navbar .actif {
     color: white;
     transition-duration: 0.5s;
     background: rgba(0,0,0,.5);
@@ -160,7 +160,7 @@
     border-bottom-right-radius: 7px;
   }
 
-  #navbar li a:hover{
+  .navbar li a:hover{
     color:white;
   }
 
