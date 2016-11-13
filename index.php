@@ -17,6 +17,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/script_mobile.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/googleanalytics.js"></script>
 	</head>
@@ -39,25 +40,29 @@
 			<header>
 				<nav>
 		    	<ul class="navbar">
-						<span  id="social">
-							<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
+						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
+
+						<span  id="bar">
+
 							<li><a id="button1" href="#">Compétences</a></li>
 							<li><a id="button2" href="#">Expérience</a></li>
 							<li><a id="button3" href="#">Formation</a></li>
 
 
-							<li class="right" id="mail"><a title="Contact" class="entypo-mail" href="#"></a></li>
-							<li class="right" id="twitter"><a title="Twitter" class="entypo-twitter" href="https://twitter.com/Nabil63" target="_blank"></a></li>
-					    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
-					    <li class="right" id="linkedin"><a title="LinkedIn" class="entypo-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
-					    <li class="right" id="github"><a title="GitHub" class="entypo-github" href="https://github.com/nabil-g" target="_blank"></a></li>
-							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
+							<span id="social">
+								<li class="right" id="mail"><a title="Contact" class="entypo-mail" href="#"></a></li>
+								<li class="right" id="twitter"><a title="Twitter" class="entypo-twitter" href="https://twitter.com/Nabil63" target="_blank"></a></li>
+						    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
+						    <li class="right" id="linkedin"><a title="LinkedIn" class="entypo-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
+						    <li class="right" id="github"><a title="GitHub" class="entypo-github" href="https://github.com/nabil-g" target="_blank"></a></li>
+								<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
+							</span>
+
 						</span>
 
 
-					</ul>
-					<ul class="navbar">
-						<li id="menu" class="entypo-dot-3"></li>
+
+						<li><a id="menu" class="entypo-dot-3" href="#"></a></li>
 					</ul>
 				</nav>
 			</header>
@@ -80,7 +85,7 @@
 				<div id="one">
 					<h2 >Compétences</h2>
 					<h3 >En cours d'apprentissage :</h3>
-					<div class="logoSkills">
+					<article class="logoSkills">
 
 							<a title="HTML5" href="https://www.w3.org/html/" target="_blank"><img src="pict/HTML5_Logo.svg"/></a>
 				      <a title="CSS3" href="https://www.w3.org/Style/CSS/" target="_blank"><img id="csslogo" src="pict/CSS-Logo.png"/></a>
@@ -89,7 +94,7 @@
 							<a title="PHP" href="http://www.php.net/" target="_blank"><img src="pict/PHP-logo.svg"/></a>
 							<a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img id="arduinologo" src="pict/Arduino_Logo.svg"/></a>
 
-					</div>
+					</article>
 
 		    	<h4 >À venir :</h4>
 		      <p><em>Ruby, Symfony, Node.JS, Angular.JS</em></p>

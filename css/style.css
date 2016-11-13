@@ -217,7 +217,7 @@
   .logoSkills{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
   }
 
 
@@ -271,7 +271,7 @@
 
   input, textarea{
     background-color: rgba(0,0,0,.1);
-    color: black;
+    color: white;
     border: 0px;
     padding: 5px;
     font-family: 'Raleway', sans-serif;
