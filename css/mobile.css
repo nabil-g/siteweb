@@ -1,114 +1,111 @@
 @media screen and (max-width:1024px) {
+    #entrance {
+        display: none;
+    }
+    *, *:hover {
+        transition: none;
+        color: none;
+        background-color: none;
+    }
+    body {
+        background: url(clouds2_blur_mid.jpg);
+        background-attachment: fixed;
+        color: white !important;
+    }
+    #downloadlink {
+        animation: none;
+    }
+    .navbar {
+        display: block;
+    }
+    .navbar li #button0 {
+        transition: none;
+    }
+    .navbar li a {
+        transition: none;
+        color: white;
+    }
+    .navbar li a:hover {
+        color: none;
+    }
+    .rubrique {
+        background: 0;
+        box-shadow: none;
+        padding: 10px;
+        display: block;
+    }
+    .rubrique::before {
+        display: none;
+    }
+    .navbar {
+        display: inline;
+    }
+    #button0, #button1, #button2, #button3 {
+        float: none;
+    }
 
-  #entrance{
-    display: none;
-  }
+    #twitter, #mail, #about, #insta, #linkedin, #emaillink, #github{
+      float: right;
+    }
 
-  *, *:hover{
-    transition: none;
-    color: none;
-    background-color: none;
-  }
-
-
-  body{
-    background: url(clouds2_blur_mid.jpg);
-    background-attachment: fixed;
-    color: white !important;
-  }
-
-  .navbar{
-    display: block;
-  }
-
-  .navbar li #button0{
-    transition: none;
-  }
-
-
-  .navbar li a{
-    transition: none;
-    color: white;
-  }
-
-
-
-  .navbar li a:hover{
-    color: none;
-  }
-
-
-
-  .rubrique{
-    background: 0;
-    box-shadow: none;
-    padding: 10px;
-    display: block;
-  }
-
-
-  .rubrique::before{
-    display: none;
-  }
-
+    #bar {
+        display: none;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        z-index: 1;
+    }
+    #bar li {
+        display: inline;
+    }
+    #social li {
+        display: inline;
+    }
+    #menu {
+        display: inline;
+        float: right;
+        /*margin: 10px;*/
+        color: white;
+    }
+    .actif {
+        border-radius: 5px;
+    }
 }
 
 @media screen and (max-width:980px) {
+    body {
+        /*background-attachment: scroll;*/
+    }
 
-  .navbar{
-    display: inline;
-  }
+    #bar li{
+      display: block;
+    }
 
-  #button0,#button1,#button2,#button3,#twitter,#mail,#about,#insta,#linkedin,#emaillink,#github{
-    float: none;
-  }
+    #twitter, #mail, #about, #insta, #linkedin, #emaillink, #github{
+      float: none;
+    }
 
-
-
-  body{
-    /*background-attachment: scroll;*/
-  }
-
-
-  .rubrique{
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    display: block;
-    margin-top: 13vh;
-  }
-
-  #grandTitre{
-    display: none;
-  }
-
-  #bar{
-    display: none;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  #social{
-    display: flex;
-    flex-direction: row;
-  }
-
-  #menu{
-    display: inline;
-    float: right;
-    margin: 10px;
-    color: white;
-  }
-
-  .logoSkills{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .actif{
-    border-radius: 5px;
-  }
-
+    #social{
+      display: flex;
+      flex-direction: row;
+    }
+    .rubrique {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        display: block;
+        margin-top: 13vh;
+    }
+    #grandTitre {
+        display: none;
+    }
+    input, textarea {
+        width: 100%;
+    }
+    .logoSkills {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

@@ -1,58 +1,60 @@
 /**** CSS ****/
 
-  /*RESET CSS*/
-  *{
+
+/*RESET CSS*/
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-
-
-  ::selection{
+ ::selection {
     background-color: black;
     color: yellow;
-  }
+}
 
-  a{
+a {
     text-decoration: none;
     color: white;
-  }
+}
 
-  /*Corps du site, arrière-plan, police générale*/
-  body{
-  	background: no-repeat url("clouds2.jpg") fixed;
+
+/*Corps du site, arrière-plan, police générale*/
+
+body {
+    background: no-repeat url("clouds2.jpg") fixed;
     background-size: cover;
-  	font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1em;
-  }
+}
 
-  #entrance{
+#entrance {
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 1);
     z-index: 10000;
-  }
+}
 
-  #entrance:before{
+#entrance:before {
     content: '';
-    background: url("clouds2.jpg")  no-repeat fixed;
+    background: url("clouds2.jpg") no-repeat fixed;
     background-size: cover;
-          -webkit-filter: blur(5px);
-             -moz-filter: blur(5px);
-              -ms-filter: blur(5px);
-               -o-filter: blur(5px);
-                  filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -1;
-  }
+}
 
-  #grandTitre{
+#grandTitre {
     display: block;
     font-family: 'Satisfy', sans-serif;
     font-size: 5em;
@@ -64,175 +66,181 @@
     left: 0;
     right: 0;
     bottom: 0;
+}
 
-  }
+#grandTitre a, #petitTitre a {
+    color: #D180C0;
+    transition: all 0.5s;
+}
 
-  #grandTitre a, #petitTitre a{
-  	color: #D180C0;
-  	transition: all 0.5s;
-  }
+#grandTitre a:hover, #petitTitre a {
+    color: #B0FAFF;
+}
 
-  #grandTitre a:hover, #petitTitre a{
-  	color: #B0FAFF;
-  }
-
-
-
-  #menu{
+#menu {
     display: none;
-  }
+}
 
-  /*Marges intérieures des cellules du tableau invisible */
-  th,td{
+
+/*Marges intérieures des cellules du tableau invisible */
+
+th, td {
     padding: 15px;
-  }
+}
 
-  /*Dimensions des images illustrant les compétences*/
-  img{
+
+/*Dimensions des images illustrant les compétences*/
+
+img {
     width: 100px;
-  }
+}
 
-  /*Dimensions spéciales pour le logo CSS*/
-  #csslogo{
+
+/*Dimensions spéciales pour le logo CSS*/
+
+#csslogo {
     width: 76px;
-  }
+}
 
-  #arduinologo{
-    width: 76px;
-  }
+#arduinologo {
+    width: 150px;
+}
 
-  #JSlogo{
+#JSlogo {
     width: 80px;
-  }
+}
 
-  [class*="entypo-"]:before{
+[class*="entypo-"]:before {
     font-family: 'entypo', sans-serif;
-  }
+}
 
-  td em {
+td em {
     font-size: 0.95em;
-  }
+}
 
-  /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
-  .navbar{
-  	list-style-type: none;
-  	overflow: hidden ;
+
+/*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
+
+.navbar {
+    list-style-type: none;
+    overflow: hidden;
     display: none;
-  }
+}
 
-  .navbar li #button0{
+.navbar li #button0 {
     font-family: 'Satisfy', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
     color: #B0FAFF;
     transition: all 0.5s;
-  }
+}
 
-  .navbar li #button0:hover{
+.navbar li #button0:hover {
     color: #D180C0;
-  }
+}
 
-  /*Elements de navigation sous forme de liste*/
-  #button0,#button1,#button2,#button3{
-  	float: left;
-  }
 
-  #twitter,#mail,#about,#insta,#linkedin,#emaillink,#github{
-    float:right;
-  }
+/*Elements de navigation sous forme de liste*/
 
-  /*Liens de la barre de navigation et liens du paragraphe*/
-  .navbar li a{
-  	display: inline-block;
-  	text-align:center;
-  	padding: 12px 14px;
-    color:black;
+#button0, #button1, #button2, #button3 {
+    float: left;
+}
+
+#twitter, #mail, #about, #insta, #linkedin, #emaillink, #github {
+    float: right;
+}
+
+
+/*Liens de la barre de navigation et liens du paragraphe*/
+
+.navbar li a {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 14px;
+    color: black;
     transition: all 0.5s;
+}
 
-  }
-
-
-  .navbar .actif {
+.navbar .actif {
     color: white;
     transition-duration: 0.5s;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, .5);
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-  }
+}
 
-  .navbar li a:hover{
-    color:white;
-  }
+.navbar li a:hover {
+    color: white;
+}
 
-  .rubrique{
-    position:relative;
-    padding:70px;
-    height:270px;
-    width:960px;
+.rubrique {
+    position: relative;
+    padding: 70px;
+    height: 270px;
+    width: 960px;
     border-radius: 10px;
     margin: auto;
     margin-top: 17vh;
     /*display: block;*/
-  	/*background: rgba(19,85,104,.4);*/
+    /*background: rgba(19,85,104,.4);*/
     background: rgba(0, 0, 0, 0.4);
-  	color:white;
+    color: white;
     text-align: center;
     /*display: flex;
     justify-content: space-between;;
     align-items: center;*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: none;
-  }
+}
 
-  .rubrique:before{
+.rubrique:before {
     content: '';
-  	background: url("clouds2.jpg")  no-repeat fixed;
+    background: url("clouds2.jpg") no-repeat fixed;
     background-size: cover;
-          -webkit-filter: blur(5px);
-             -moz-filter: blur(5px);
-              -ms-filter: blur(5px);
-               -o-filter: blur(5px);
-                  filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -1;
-  }
+}
 
-  #one, #two, #three, #four, #five, #six{
+#one, #two, #three, #four, #five, #six {
     display: none;
-  }
+}
 
-  /*C'est pour espacer chaque element des div sauf le dernier*/
-  .rubrique div *:not(:last-child){
+
+/*C'est pour espacer chaque element des div sauf le dernier*/
+
+.rubrique div *:not(:last-child) {
     margin-bottom: 13px;
-  }
+}
 
-  .rubrique div * {
+.rubrique div * {
     margin: auto;
-  }
+}
 
-  .logoSkills{
+.logoSkills {
     display: flex;
     flex-direction: row;
     /*justify-content: space-between;*/
-  }
+}
 
-
-
-  #welcome{
+#welcome {
     display: block;
-  }
+}
 
-  #hw {
-  font-family: 'Inconsolata', sans-serif;
-  color: white;
-  }
+#hw {
+    font-family: 'Inconsolata', sans-serif;
+    color: white;
+}
 
-
-  #downloadlink{
+#downloadlink {
     text-decoration: none;
     text-align: center;
     background-color: blue;
@@ -243,34 +251,30 @@
     padding: 8px 25px;
     margin-top: 10px;
     transition: all 0.5s;
-  }
+}
 
-  #downloadlink:hover{
+#downloadlink:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
-  @keyframes anim1 {
-      from {
+@keyframes anim1 {
+    from {
+        background: #61AFFC;
+    }
+    50% {
+        background: #009999;
+    }
+    to {
+        background: #61AFFC;
+    }
+}
 
-          background: #61AFFC;
-      }
-      50%  {
-          background: #009999;
-      }
-      to   {
-          background: #61AFFC;
-      }
-  }
-
-  .credits{
+.credits {
     font-size: 0.90em;
-  }
+}
 
-
-
-
-  input, textarea{
-    background-color: rgba(0,0,0,.1);
+input, textarea {
+    background-color: rgba(0, 0, 0, .1);
     color: white;
     border: 0px;
     padding: 5px;
@@ -280,57 +284,56 @@
     resize: none;
     font-size: 0.90em;
     transition: all 0.8s;
+}
 
-  }
-
-  textarea{
+textarea {
     height: 200px;
-  }
+}
 
-  input{
+input {
     height: 30px;
-  }
+}
 
-  input:focus, textarea:focus{
+input:focus, textarea:focus {
     background-color: rgba(0, 0, 0, 0.3);
-  }
+}
 
-  #erreurForm{
+#erreurForm {
     /*opacity: 0;*/
     display: none;
     font-size: 0.9em;
     font-style: italic;
-  }
+}
 
-  #okForm{
+#okForm {
     height: 17px;
-  }
+}
 
-  #reponseMsg{
+#reponseMsg {
     display: none;
-  }
+}
 
-  #sendbutton{
+#sendbutton {
     border: 0;
     background-color: blue;
     color: white;
     height: 30px;
-    width:100px;
+    width: 100px;
     font-size: 1em;
     border-radius: 3px;
     margin: 0 auto;
     transition: all 1s;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-  }
+}
 
-  #sendbutton:hover{
+#sendbutton:hover {
     background-color: #009999;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+}
 
-  #sendbutton:focus{
+#sendbutton:focus {
     background-color: #006666;
     color: #66ffff;
     transition: 0.5s;
-  }
+}

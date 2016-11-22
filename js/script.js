@@ -11,7 +11,7 @@ function neutreForm() { // Supprimer les couleurs du formulaire
 }
 
 
-if (window.matchMedia("(min-width: 981px)").matches) {
+if (window.matchMedia("(min-width: 1025px)").matches) {
 	$(document).ready(function() {
 
 		$('#grandTitre').click(function(){

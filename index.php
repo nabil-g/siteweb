@@ -40,7 +40,7 @@
 			<header>
 				<nav>
 		    	<ul class="navbar">
-						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
+						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a><a id="menu" class="entypo-dot-3" href="#"></a></li>
 
 						<span  id="bar">
 
@@ -55,14 +55,15 @@
 						    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
 						    <li class="right" id="linkedin"><a title="LinkedIn" class="entypo-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
 						    <li class="right" id="github"><a title="GitHub" class="entypo-github" href="https://github.com/nabil-g" target="_blank"></a></li>
-								<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
 							</span>
+
+							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
 
 						</span>
 
 
 
-						<li><a id="menu" class="entypo-dot-3" href="#"></a></li>
+
 					</ul>
 				</nav>
 			</header>
@@ -92,12 +93,12 @@
 							<a title="JavaScript" href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><img id="JSlogo" src="pict/JavaScript_logo.svg"/></a>
 							<a title="jQuery" href="https://jquery.com/" target="_blank"><img src="pict/JQuery_logo.png"/></a>
 							<a title="PHP" href="http://www.php.net/" target="_blank"><img src="pict/PHP-logo.svg"/></a>
-							<a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img id="arduinologo" src="pict/Arduino_Logo.svg"/></a>
+							<a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img id="arduinologo" src="pict/ArduinoCommunityLogo_SVG.png"/></a>
 
 					</article>
 
 		    	<h4 >À venir :</h4>
-		      <p><em>Ruby, Symfony, Node.JS, Angular.JS</em></p>
+		      <p><em>Node.JS, Angular2, Vue.js, Symfony</em></p>
 				</div>
 
 				<!-- DIV EXPERIENCE -->
