@@ -12,8 +12,11 @@
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link type="text/css" rel="stylesheet" href="css/mobile.css"/>
 
+
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no>
+		<meta name="description" content="Je présente ici mon CV">
+		<meta name="keywords" content="developer,web,dev,développeur,CSS,HTML,JS,PHP,simplon,coda,codeur,internet,informatique">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -187,7 +190,7 @@
 							 </td>
 							</tr>
 						</table>
-						<p class="credits">Ce site a été entièrement codé par moi-même.</br></br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.   <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
+						<p class="credits">Ce site a été entièrement codé par moi-même.</br></br>&copy; <?php echo date('Y'); ?> Nabil Ghedjati.   <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
 				</div>
 
 				<!-- DIV MENTIONS -->
@@ -199,11 +202,11 @@
 						</br>Ce site est hébergé par sHost.ca, Nouveau-Brunswick &amp; Québec, Canada.
 						</br>Il fonctionne de manière optimale sur les navigateurs Chrome et Firefox et n'utilise aucun cookie.
 						</br>
-						</br>The PHP logo is Copyright &copy; 2001-<?php echo date("Y"); ?> the PHP Group. All rights reserved.
-						</br>The jQuery logo is Copyright &copy; <?php echo date("Y"); ?> The jQuery Foundation.
-						</br>Crédits photo :<a href="https://unsplash.com/photos/Y1ByvAGQ5iE" target="_blank">Unsplash.com</a>
+						</br>The PHP logo is Copyright &copy; 2001-<?php echo date('Y'); ?> the PHP Group. All rights reserved.
+						</br>The jQuery logo is Copyright &copy; <?php echo date('Y'); ?> The jQuery Foundation.
+						</br>Crédits photo : <a href="https://unsplash.com/photos/Y1ByvAGQ5iE" target="_blank">Unsplash.com</a>
 						</br>
-						</br>&copy; <?php echo date("Y"); ?> Nabil Ghedjati.
+						</br>&copy; <?php echo date('Y'); ?> Nabil Ghedjati.
 					</p>
 				</div>
 
@@ -227,7 +230,7 @@
 					</div>
 
 					<p class="credits">
-						&copy; <?php echo date("Y"); ?> Nabil Ghedjati.
+						&copy; <?php echo date('Y'); ?> Nabil Ghedjati.
 					</p>
 
 				</div>

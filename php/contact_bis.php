@@ -10,8 +10,7 @@
 
         <?php
 
-          include ('db.php');
-
+          include 'db.php';
 
         //RECUPERATION DES DONNEES DU FORMULAIRE DE CONTACT
         // Pour info :
@@ -19,7 +18,7 @@
         // Le suffixe us qui termine les variables résultant d'un formulaire me permet de les distinguer des autres variables (user string).
 
         // On teste la présence de ces variables envoyées via le formulaire
-        if(isset($_POST['name']) AND isset($_POST['mailaddress']) AND isset($_POST['message']) AND !empty($_POST['name']) AND !empty($_POST['mailaddress']) AND !empty($_POST['message'])) {
+        if (isset($_POST['name']) and isset($_POST['mailaddress']) and isset($_POST['message']) and !empty($_POST['name']) and !empty($_POST['mailaddress']) and !empty($_POST['message'])) {
 
           //On supprime les potentielles balises HTML et on enregistre les variables du formulaire dans d'autres variables, plus lisibles.
           $name_us = strip_tags($_POST['name']);
@@ -29,24 +28,21 @@
           $nav = $_SERVER['HTTP_USER_AGENT'];
           $adresseip = $_SERVER['REMOTE_ADDR'];
 
-
-
           // VERIFICATION DU QUOTA D'ENVOI DE MESSAGES
-
-          $r = $bdd_sitenab->prepare('SELECT COUNT(*) AS nbremsg FROM messages WHERE adresseip = ? AND date_m = ? '); // préparation d'une requete de lecture
+          // préparation d'une requete de lecture
+          $r = $bdd_sitenab->prepare('SELECT COUNT(*) AS nbremsg FROM messages WHERE adresseip = ? AND date_m = CURDATE() ');
           // je compte le nombre de messages répondant au critère
 
-          $date = date("Y-m-d"); // j'enregistre la date actuelle dans une variable
+          // $date = date('Y-m-d'); // j'enregistre la date actuelle dans une variable
 
-          $r->execute(array($adresseip, $date)); // j'exécute la requete préparée
+          $r->execute(array($adresseip)); // j'exécute la requete préparée
 
           $donnees = $r->fetch(); // je parcoure la requete exécutée et enregistre le tableau qui en découle dans une variable
           $r->closeCursor(); // je libère le serveur en mettant fin à la requête
 
           if ($donnees['nbremsg'] >= 3) { // si le nombre de messages est supérieur ou égal à 3
-            echo "</br>Vous ne pouvez pas envoyer plus de 3 messages dans la même journée, désolé !</br></br>"; // alors ...
-          }
-          else{ // sinon
+            echo '</br>Vous ne pouvez pas envoyer plus de 3 messages dans la même journée, désolé !</br></br>'; // alors ...
+          } else { // sinon
             //ENREGISTREMENT DES DONNEES DANS LA BASE DE DONNEES
 
             //On prépare la requete d'insertion avant de lui insérer les variables de l'utilisateur (afin d'eviter des injections SQL).
@@ -61,28 +57,17 @@
               // 'date_m' => date("Y-m-d"),
               // 'heure_m' => date("H:i:s"),
               'adresseip' => $adresseip,
-              'navigateur' => $nav
+              'navigateur' => $nav,
               ));
 
             // On affiche un message.
             echo "</br>Merci pour votre message $name_us !</br></br>";
           }
-
-
-
-
-        }
-        else{
-          // S'il n'y a pas de variables de formulaire, on affiche un message d'erreur.
+        } else {
+            // S'il n'y a pas de variables de formulaire, on affiche un message d'erreur.
           echo "</br>Vous n'avez pas renseigné votre nom, votre adresse e-mail ou votre message !</br></br>";
-          echo "<a id='back' href='#'> < Retour</a>";
+            echo "<a id='back' href='#'> < Retour</a>";
         }
-
-
-
-
-
-
 
         ?>
 
