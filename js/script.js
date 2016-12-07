@@ -74,7 +74,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 			$("#six, .sixbloc").fadeIn("slow");
 			$(".rubrique").animate({height:"480px",padding:"30px"});
 			$(".sixbloc form").css({"display":"flex","flex-direction":"column"}).show(); // Je fais apparaitre le formulaire s'il a été masqué par une réponse ajax
-			// $("form input").val("");
+			$("form input, textarea").val("");
 			$('#reponseMsg').hide(); // je masque l'éventuelle réponse ajax affichée
 			neutreForm();
 

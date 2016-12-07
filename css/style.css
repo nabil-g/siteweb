@@ -284,6 +284,7 @@ input, textarea {
     resize: none;
     font-size: 0.90em;
     transition: all 0.8s;
+    outline: none;
 }
 
 textarea {
