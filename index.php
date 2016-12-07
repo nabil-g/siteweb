@@ -19,6 +19,8 @@
 		<meta name="keywords" content="developer,web,dev,développeur,CSS,HTML,JS,PHP,simplon,coda,codeur,internet,informatique">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="velocity.min.js">
+		</script>
     <script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/script_mobile.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
