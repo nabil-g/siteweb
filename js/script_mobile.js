@@ -7,7 +7,6 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
       $('#bar').slideToggle();
     });
 
-
 		setInterval("Blink()",1200);
 		$("#button0").click(function() {
 			$(".navbar li a").removeClass("actif");
