@@ -68,11 +68,25 @@ body {
 #grandTitre a, #petitTitre a {
     color: #D180C0;
     transition: all 0.5s;
+    animation: animtitre 5s infinite;
 }
 
-#grandTitre a:hover, #petitTitre a {
-    color: #B0FAFF;
+
+@keyframes animtitre {
+    from {
+        color: #61AFFC;
+    }
+    50% {
+        color: #009999;
+    }
+    to {
+        color: #61AFFC;
+    }
 }
+
+/*#grandTitre a:hover, #petitTitre a {
+    color: #B0FAFF;
+}*/
 
 #menu {
     display: none;
@@ -170,7 +184,7 @@ td em {
     color: white;
 }
 
-.rubrique {
+#rubrique {
     position: relative;
     padding: 70px;
     height: 270px;
@@ -190,7 +204,7 @@ td em {
     display: none;
 }
 
-.rubrique:before {
+#rubrique:before {
     content: '';
     background: url("clouds2.jpg") no-repeat fixed;
     background-size: cover;
@@ -214,11 +228,11 @@ td em {
 
 /*C'est pour espacer chaque element des div sauf le dernier*/
 
-.rubrique div *:not(:last-child) {
+#rubrique div *:not(:last-child) {
     margin-bottom: 13px;
 }
 
-.rubrique div * {
+#rubrique div * {
     margin: auto;
 }
 
@@ -244,7 +258,7 @@ td em {
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    animation: anim1 5s infinite;
+    animation: animDl 5s infinite;
     padding: 8px 25px;
     margin-top: 10px;
     transition: all 0.5s;
@@ -254,7 +268,7 @@ td em {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@keyframes anim1 {
+@keyframes animDl {
     from {
         background: #61AFFC;
     }
