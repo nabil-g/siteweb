@@ -7,7 +7,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="http://weloveiconfonts.com/api/?family=entypo">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="icon" type="image/png" href="pict/favicon.png"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link type="text/css" rel="stylesheet" href="css/mobile.css"/>
@@ -19,6 +19,7 @@
 		<meta name="keywords" content="developer,web,dev,développeur,CSS,HTML,JS,PHP,simplon,coda,codeur,internet,informatique">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="js/jquery.color.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/script_mobile.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
@@ -29,9 +30,9 @@
 
 		<!-- TITRE À CACHER -->
 
-		<section id="black">
+		<!-- <section id="black">
 
-		</section>
+		</section> -->
 
 
 		<section id="entrance">
@@ -44,12 +45,12 @@
 
 			<!-- HEADER -->
 
-			<header>
 				<nav>
 		    	<ul class="navbar">
-						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a><a id="menu" class="entypo-dot-3" href="#"></a></li>
+						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a><a id="menu" class="fa fa-bars" aria-hidden="true" href="#"></a></li>
 
 						<span  id="bar">
+							
 
 							<li><a id="button1" href="#">Compétences</a></li>
 							<li><a id="button2" href="#">Expérience</a></li>
@@ -57,11 +58,11 @@
 
 
 							<span id="social">
-								<li class="right" id="mail"><a title="Contact" class="entypo-mail" href="#"></a></li>
-								<li class="right" id="twitter"><a title="Twitter" class="entypo-twitter" href="https://twitter.com/Nabil63" target="_blank"></a></li>
-						    <li class="right" id="insta"><a title="Instagram" class="entypo-instagrem" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
-						    <li class="right" id="linkedin"><a title="LinkedIn" class="entypo-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
-						    <li class="right" id="github"><a title="GitHub" class="entypo-github" href="https://github.com/nabil-g" target="_blank"></a></li>
+								<li class="right" id="mail"><a title="Contact" class="fa fa-envelope" href="#"></a></li>
+								<li class="right" id="twitter"><a title="Twitter" class="fa fa-twitter"  href="https://twitter.com/Nabil63" target="_blank"></a></li>
+						    <li class="right" id="insta"><a title="Instagram" class="fa fa-instagram" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
+						    <li class="right" id="linkedin"><a title="LinkedIn" class="fa fa-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
+						    <li class="right" id="github"><a title="GitHub" class="fa fa-github" href="https://github.com/nabil-g" target="_blank"></a></li>
 							</span>
 
 							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
@@ -73,8 +74,6 @@
 
 					</ul>
 				</nav>
-			</header>
-
 			<!-- SECTION RUBRIQUE -->
 
 			<section id="rubrique">

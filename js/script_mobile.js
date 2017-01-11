@@ -49,9 +49,9 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
       $('#bar').slideUp();
 		});
 
-		$(".entypo-mail").click(function(){
+		$(".fa-envelope").click(function(){
 			$(".navbar li a").removeClass("actif");
-			$(".entypo-mail").addClass("actif");
+			$(".fa-envelope").addClass("actif");
 			$("div").css("display","none");
 			$("#six, .sixbloc").fadeIn("slow");
       $('#bar').slideUp();

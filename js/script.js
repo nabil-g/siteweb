@@ -16,19 +16,13 @@ function neutreForm() { // Supprimer les couleurs du formulaire
 if (window.matchMedia("(min-width: 1025px)").matches) {
 	$(document).ready(function() {
 
-		$('#black').fadeOut(2000, function () {
-			
-
-				$("#grandTitre").fadeIn(700);
-
+		$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.1)"}, 1500, function () {
+				$("#grandTitre").fadeIn(600);
 		});
 
 
-
-
 		$('#grandTitre').click(function(){
-			$('#grandTitre').animate({fontSize: "5em"}, function(){
-				$('#grandTitre').fadeOut('slow');
+			$('#grandTitre').animate({fontSize: "5em", color: "rgba(0,0,0,0)"}, function(){
 				$('#entrance').fadeOut('slow', function(){
 					$('.navbar').slideDown('slow','swing',function(){
 						$('#rubrique').slideDown('slow',"swing").css({"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"})
@@ -81,9 +75,9 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 			$("#rubrique").animate({height:"326px",padding:"30px"});
 		});
 
-		$(".entypo-mail").click(function(){
+		$(".fa-envelope").click(function(){
 			$(".navbar li a").removeClass("actif");
-			$(".entypo-mail").addClass("actif");
+			$(".fa-envelope").addClass("actif").css("border-bottom-right-radius","0");
 			$("div").css("display","none");
 			$("#six, .sixbloc").fadeIn("slow");
 			$("#rubrique").animate({height:"480px",padding:"30px"});
@@ -92,15 +86,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 			$('#reponseMsg').hide(); // je masque l'éventuelle réponse ajax affichée
 			neutreForm();
 
-
-
-
-
-
 		});
-
-
-
 
 	});
 
