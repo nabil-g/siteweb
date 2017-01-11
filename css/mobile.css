@@ -1,4 +1,9 @@
 @media screen and (max-width:1024px) {
+
+  #black{
+    display: none;
+  }
+
     #entrance {
         display: none;
     }

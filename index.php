@@ -29,9 +29,13 @@
 
 		<!-- TITRE À CACHER -->
 
+		<section id="black">
+
+		</section>
+
+
 		<section id="entrance">
 			<h1 id="grandTitre"><a href="#">Nabil Ghedjati</a></h1>
-			<!-- <h2 id="petitTitre">Bienvenue !</h2> -->
 		</section>
 
 

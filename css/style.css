@@ -29,16 +29,24 @@ body {
     font-size: 1em;
 }
 
+#black{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+
 #entrance {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
-    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 #entrance:before {
     content: '';
@@ -58,11 +66,9 @@ body {
 }
 
 #grandTitre {
-    display: block;
+    display: none;
     font-family: 'Satisfy', sans-serif;
-    font-size: 5em;
-
-
+    font-size: 8em;
 }
 
 #grandTitre a, #petitTitre a {
@@ -197,9 +203,6 @@ td em {
     background: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center;
-    /*display: flex;
-    justify-content: space-between;;
-    align-items: center;*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: none;
 }
@@ -239,12 +242,18 @@ td em {
 .logoSkills {
     display: flex;
     flex-direction: row;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
+    align-items: center;
 }
 
 #welcome {
     display: block;
 }
+
+#one{
+  width: 100%;
+}
+
 
 #hw {
     font-family: 'Inconsolata', sans-serif;
