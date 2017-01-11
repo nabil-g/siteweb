@@ -30,13 +30,13 @@
 
 		<!-- TITRE À CACHER -->
 
-		<!-- <section id="black">
-
-		</section> -->
 
 
 		<section id="entrance">
 			<h1 id="grandTitre"><a href="#">Nabil Ghedjati</a></h1>
+			<noscript>
+				Ce site nécessite l'activation de JavaScript.
+			</noscript>
 		</section>
 
 
@@ -50,7 +50,7 @@
 						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a><a id="menu" class="fa fa-bars" aria-hidden="true" href="#"></a></li>
 
 						<span  id="bar">
-							
+
 
 							<li><a id="button1" href="#">Compétences</a></li>
 							<li><a id="button2" href="#">Expérience</a></li>

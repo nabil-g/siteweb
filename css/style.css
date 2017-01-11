@@ -33,12 +33,9 @@ body {
     font-size: 1em;
 }
 
-/*#black{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: black;
-}*/
+noscript{
+  color: white;
+}
 
 
 #entrance {
