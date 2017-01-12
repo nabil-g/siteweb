@@ -39,7 +39,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 		});
 
 		$('body').keypress(function (e) {
-			if (e.which == 13) {
+			if (e.which == 13 || e.which == 32) {
 				display();
 			}
 		});
