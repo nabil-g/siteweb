@@ -24,8 +24,10 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 		$('#grandTitre').click(function(){
 			$('#grandTitre').animate({fontSize: "5em", color: "rgba(0,0,0,0)"}, function(){
 				$('#entrance').fadeOut('slow', function(){
-					$('.navbar').slideDown('slow','swing',function(){
-						$('#rubrique').slideDown('slow',"swing").css({"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"})
+					$('.navbar').fadeIn('slow',function(){
+						$('#rubrique').slideDown(700, function () {
+							$('#welcome').fadeIn('slow');
+						}).css({"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"});
 					});
 				});
 			});

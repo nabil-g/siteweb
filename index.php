@@ -203,7 +203,7 @@
 					<p class="credits">
 						Créateur et propriétaire : Nabil Ghedjati
 						</br>Ce site est hébergé par sHost.ca, Nouveau-Brunswick &amp; Québec, Canada.
-						</br>Il fonctionne de manière optimale sur les navigateurs Chrome et Firefox et n'utilise aucun cookie.
+						</br>Il fonctionne de manière optimale sur les navigateurs Chrome et Firefox.
 						</br>
 						</br>The PHP logo is Copyright &copy; 2001-<?php echo date('Y'); ?> the PHP Group. All rights reserved.
 						</br>The jQuery logo is Copyright &copy; <?php echo date('Y'); ?> The jQuery Foundation.
