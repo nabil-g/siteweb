@@ -12,6 +12,17 @@ function neutreForm() { // Supprimer les couleurs du formulaire
 	$('input,textarea').css('background-color','');
 }
 
+function display() {
+	$('#grandTitre').animate({fontSize: "5em", color: "rgba(0,0,0,0)"}, function(){
+		$('#entrance').fadeOut('slow', function(){
+			$('.navbar').fadeIn('slow',function(){
+				$('#rubrique').slideDown(700, function () {
+					$('#welcome').fadeIn('slow');
+				}).css({"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"});
+			});
+		});
+	});
+}
 
 if (window.matchMedia("(min-width: 1025px)").matches) {
 	$(document).ready(function() {
@@ -21,16 +32,16 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 		});
 
 
-		$('#grandTitre').click(function(){
-			$('#grandTitre').animate({fontSize: "5em", color: "rgba(0,0,0,0)"}, function(){
-				$('#entrance').fadeOut('slow', function(){
-					$('.navbar').fadeIn('slow',function(){
-						$('#rubrique').slideDown(700, function () {
-							$('#welcome').fadeIn('slow');
-						}).css({"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"});
-					});
-				});
-			});
+
+
+		$('#grandTitre').click(function () {
+			display();
+		});
+
+		$('body').keypress(function (e) {
+			if (e.which == 13) {
+				display();
+			}
 		});
 
 

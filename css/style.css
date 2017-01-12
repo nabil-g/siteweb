@@ -137,6 +137,8 @@ td em {
 }
 
 
+
+
 /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
 
 .navbar {
@@ -199,8 +201,6 @@ td em {
     border-radius: 10px;
     margin: auto;
     margin-top: 17vh;
-    /*display: block;*/
-    /*background: rgba(19,85,104,.4);*/
     background: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center;
@@ -318,13 +318,12 @@ textarea {
 
 textarea::-webkit-scrollbar
 {
-    width: 10px;
-    background-color: rgba(255, 0, 0, 1);
-    /*-webkit-border-radius: 6px;*/
+    width: 4px;
 }
-textarea::-webkit-scrollbar-track
-{
-  background-color: yellow;
+
+textarea::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 6px;
 }
 
 input {
