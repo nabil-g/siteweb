@@ -76,6 +76,11 @@
 				</nav>
 			<!-- SECTION RUBRIQUE -->
 
+			<noscript>
+				Ce site nécessite l'activation de JavaScript.
+			</noscript>
+
+
 			<section id="rubrique">
 
 					<!-- DIV WELCOME -->
@@ -202,7 +207,7 @@
 					<h2>Mentions légales</h2>
 					<p class="credits">
 						Créateur et propriétaire : Nabil Ghedjati
-						</br>Ce site est hébergé par sHost.ca, Nouveau-Brunswick &amp; Québec, Canada.
+					</br>Ce site est hébergé par <a href="https://shost.ca/">sHost.ca</a>, Nouveau-Brunswick &amp; Québec, Canada.
 						</br>Il fonctionne de manière optimale sur les navigateurs Chrome et Firefox.
 						</br>
 						</br>The PHP logo is Copyright &copy; 2001-<?php echo date('Y'); ?> the PHP Group. All rights reserved.

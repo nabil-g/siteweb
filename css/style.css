@@ -71,7 +71,7 @@ noscript{
 #grandTitre {
     display: none;
     font-family: 'Satisfy', sans-serif;
-    font-size: 8em;
+    font-size: 5em;
 }
 
 #grandTitre a, #petitTitre a {
@@ -93,9 +93,6 @@ noscript{
     }
 }
 
-/*#grandTitre a:hover, #petitTitre a {
-    color: #B0FAFF;
-}*/
 
 #menu {
     display: none;

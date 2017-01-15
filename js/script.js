@@ -13,7 +13,7 @@ function neutreForm() { // Supprimer les couleurs du formulaire
 }
 
 function display() {
-	$('#grandTitre').animate({fontSize: "5em", color: "rgba(0,0,0,0)"}, function(){
+	$('#grandTitre').animate({fontSize: "2em", color: "rgba(0,0,0,0)"}, function(){
 		$('#entrance').fadeOut('slow', function(){
 			$('.navbar').fadeIn('slow',function(){
 				$('#rubrique').slideDown(700, function () {
