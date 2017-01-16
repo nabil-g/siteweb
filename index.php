@@ -20,6 +20,7 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="js/jquery.color.js"></script>
+		<script src="js/typed.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/script_mobile.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
@@ -86,7 +87,7 @@
 					<!-- DIV WELCOME -->
 
 				<div id="welcome">
-					<h2 id="hw" >Hello world.<span id="cursor">█</span></h2>
+					<h2 id="hw" ></h2>
 					<p id="msg">Bienvenue ! Je suis un jeune étudiant actuellement en reconversion dans le monde du Web,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
 					<a id="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a>

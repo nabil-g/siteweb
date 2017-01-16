@@ -17,7 +17,14 @@ function display() {
 		$('#entrance').fadeOut('slow', function(){
 			$('.navbar').fadeIn('slow',function(){
 				$('#rubrique').slideDown(700, function () {
-					$('#welcome').fadeIn('slow');
+					$('#welcome').fadeIn('slow', function () {
+						$("#hw").typed({
+										strings: ["Hello world.<span id='cursor'>█</span>"],
+										typeSpeed: 0,
+										contenttype: "text",
+										showCursor: false
+									});
+					});
 				}).css({"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"});
 			});
 		});
@@ -46,6 +53,10 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 
 
 		setInterval("Blink()",1200);
+
+
+
+
 		$("#button0").click(function() {
 			$(".navbar li a").removeClass("actif");
 			$("div").css("display","none");
