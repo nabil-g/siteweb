@@ -34,12 +34,9 @@ function display() {
 if (window.matchMedia("(min-width: 1025px)").matches) {
 	$(document).ready(function() {
 
-		$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.1)"}, 1500, function () {
-				$("#grandTitre").fadeIn(600);
+		$("#grandTitre").fadeIn(1500, function () {
+			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.1)"}, 1500);
 		});
-
-
-
 
 		$('#grandTitre').click(function () {
 			display();
@@ -51,11 +48,7 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 			}
 		});
 
-
 		setInterval("Blink()",1200);
-
-
-
 
 		$("#button0").click(function() {
 			$(".navbar li a").removeClass("actif");
