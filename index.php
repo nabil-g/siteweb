@@ -8,6 +8,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 		<link rel="icon" type="image/png" href="pict/favicon.png"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link type="text/css" rel="stylesheet" href="css/mobile.css"/>
@@ -34,7 +35,7 @@
 
 
 		<section id="entrance">
-			<h1 id="grandTitre"><a href="#">Nabil Ghedjati</a></h1>
+			<h1 id="grandTitre"><a href="#">Nabil.Ghedjati</a></h1>
 			<noscript>
 				Ce site nécessite l'activation de JavaScript.
 			</noscript>
@@ -225,7 +226,6 @@
 
 					<h2>Contact</h2>
 
-					<div class="sixbloc">
 						<form id="form" name="contactform" accept-charset="UTF-8" onsubmit="return verifForm(this)" method="POST">
 							<input type="text" id="name" name="name" placeholder="Votre nom" autofocus value="">
 							<input type="email" id="mailaddress" name="mailaddress" placeholder="Votre adresse e-mail" value=""  >
@@ -236,7 +236,6 @@
 							<p id="okForm"></p>
 							<button id="sendbutton" type="submit" name="send">Envoyer</button>
 						</form>
-					</div>
 
 					<p class="credits">
 						&copy; <?php echo date('Y'); ?> Nabil Ghedjati.

@@ -62,24 +62,6 @@ noscript{
 }
 
 
-
-#entrance:before {
-    content: '';
-    background: url("clouds2.jpg") no-repeat fixed;
-    background-size: cover;
-    -webkit-filter: brightness(40%);
-    -moz-filter: brightness(40%);
-    -ms-filter: brightness(40%);
-    -o-filter: brightness(40%);
-    filter: brightness(40%);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-}
-
 #grandTitre {
     display: none;
     font-family: 'Satisfy', sans-serif;
@@ -164,7 +146,6 @@ img:hover{
     width: 80px;
 }
 
-
 td em {
     font-size: 0.95em;
 }
@@ -231,7 +212,7 @@ td em {
 
 #rubrique {
     position: relative;
-    padding: 70px;
+    padding: 30px;
     height: 270px;
     width: 960px;
     border-radius: 10px;
@@ -262,21 +243,24 @@ td em {
 }
 
 #one, #two, #three, #four, #five, #six {
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 
 /*C'est pour espacer chaque element des div sauf le dernier*/
 
-#rubrique div *:not(:last-child) {
+/*#rubrique div *:not(:last-child) {
     margin-bottom: 13px;
-}
+}*/
 
-#rubrique div * {
+/*#rubrique div * {
     margin: auto;
-}
+}*/
 
 .logoSkills {
+  width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -372,6 +356,10 @@ input, textarea {
     -webkit-transition: all 0.8s;
     transition: all 0.8s;
     outline: none;
+}
+
+form{
+  height: 100%;
 }
 
 textarea {
