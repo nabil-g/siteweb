@@ -251,13 +251,15 @@ td em {
 
 /*C'est pour espacer chaque element des div sauf le dernier*/
 
-/*#rubrique div *:not(:last-child) {
-    margin-bottom: 13px;
-}*/
 
-/*#rubrique div * {
+#rubrique div * {
     margin: auto;
-}*/
+}
+
+#welcome * {
+  margin: 10px;
+}
+
 
 .logoSkills {
   width: 100%;

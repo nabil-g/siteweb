@@ -49,31 +49,16 @@
 
 				<nav>
 		    	<ul class="navbar">
-						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a><a id="menu" class="fa fa-bars" aria-hidden="true" href="#"></a></li>
-
-						<span  id="bar">
-
-
-							<li><a id="button1" href="#">Compétences</a></li>
-							<li><a id="button2" href="#">Expérience</a></li>
-							<li><a id="button3" href="#">Formation</a></li>
-
-
-							<span id="social">
-								<li class="right" id="mail"><a title="Contact" class="fa fa-envelope" href="#"></a></li>
-								<li class="right" id="twitter"><a title="Twitter" class="fa fa-twitter"  href="https://twitter.com/Nabil63" target="_blank"></a></li>
-						    <li class="right" id="insta"><a title="Instagram" class="fa fa-instagram" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
-						    <li class="right" id="linkedin"><a title="LinkedIn" class="fa fa-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
-						    <li class="right" id="github"><a title="GitHub" class="fa fa-github" href="https://github.com/nabil-g" target="_blank"></a></li>
-							</span>
-
-							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
-
-						</span>
-
-
-
-
+						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
+						<li><a id="button1" href="#">Compétences</a></li>
+						<li><a id="button2" href="#">Expérience</a></li>
+						<li><a id="button3" href="#">Formation</a></li>
+						<li class="right" id="mail"><a title="Contact" class="fa fa-envelope" href="#"></a></li>
+						<li class="right" id="twitter"><a title="Twitter" class="fa fa-twitter"  href="https://twitter.com/Nabil63" target="_blank"></a></li>
+						<li class="right" id="insta"><a title="Instagram" class="fa fa-instagram" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
+						<li class="right" id="linkedin"><a title="LinkedIn" class="fa fa-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
+						<li class="right" id="github"><a title="GitHub" class="fa fa-github" href="https://github.com/nabil-g" target="_blank"></a></li>
+						<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
 					</ul>
 				</nav>
 			<!-- SECTION RUBRIQUE -->
@@ -91,7 +76,7 @@
 					<h2 id="hw" ></h2>
 					<p id="msg">Bienvenue ! Je suis un jeune étudiant actuellement en reconversion dans le monde du Web,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
-					<a id="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a>
+					<p><a id="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
 				</div>
 
 				<!-- DIV COMPETENCES -->

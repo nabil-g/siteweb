@@ -1,13 +1,4 @@
 <p id="reponseMsg">
-
-
-
-
-
-
-
-
-
         <?php
 
           include 'db.php';
@@ -70,15 +61,6 @@
         }
 
         ?>
-
-
-
-
-
-
-
-
-
 
 
 </p>
