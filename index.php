@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-
 	<head>
 		<title>Site de Nabil Ghedjati</title>
-
 		<link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
@@ -12,7 +10,6 @@
 		<link rel="icon" type="image/png" href="pict/favicon.png"/>
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
 		<link type="text/css" rel="stylesheet" href="css/mobile.css"/>
-
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no>
@@ -23,7 +20,6 @@
 		<script src="js/jquery.color.js"></script>
 		<script src="js/typed.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-		<script type="text/javascript" src="js/script_mobile.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
     <script type="text/javascript" src="js/googleanalytics.js"></script>
 	</head>
@@ -38,6 +34,7 @@
 			<h1 id="grandTitre"><a href="#">Nabil.Ghedjati</a></h1>
 			<noscript>
 				Ce site nécessite l'activation de JavaScript.
+				<p><a class="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
 			</noscript>
 		</section>
 
@@ -47,7 +44,7 @@
 
 			<!-- HEADER -->
 
-				<nav>
+				<header>
 		    	<ul class="navbar">
 						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
 						<li><a id="button1" href="#">Compétences</a></li>
@@ -60,7 +57,7 @@
 						<li class="right" id="github"><a title="GitHub" class="fa fa-github" href="https://github.com/nabil-g" target="_blank"></a></li>
 						<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
 					</ul>
-				</nav>
+				</header>
 			<!-- SECTION RUBRIQUE -->
 
 			<noscript>
@@ -72,36 +69,48 @@
 
 					<!-- DIV WELCOME -->
 
-				<div id="welcome">
+				<div id="welcome" class="rubDiv">
 					<h2 id="hw" ></h2>
 					<p id="msg">Bienvenue ! Je suis un jeune étudiant actuellement en reconversion dans le monde du Web,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
-					<p><a id="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
+					<p><a class="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
 				</div>
 
 				<!-- DIV COMPETENCES -->
 
-				<div id="one">
-					<h2 >Compétences</h2>
-					<h3 >En cours d'apprentissage :</h3>
-					<article class="logoSkills">
-
-							<a title="HTML5" href="https://www.w3.org/html/" target="_blank"><img src="pict/HTML5_Logo.svg"/></a>
-				      <a title="CSS3" href="https://www.w3.org/Style/CSS/" target="_blank"><img id="csslogo" src="pict/CSS-Logo.png"/></a>
-							<a title="JavaScript" href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank"><img id="JSlogo" src="pict/JavaScript_logo.svg"/></a>
-							<a title="jQuery" href="https://jquery.com/" target="_blank"><img src="pict/JQuery_logo.png"/></a>
-							<a title="PHP" href="http://www.php.net/" target="_blank"><img src="pict/PHP-logo.svg"/></a>
-							<a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img id="arduinologo" src="pict/ArduinoCommunityLogo_SVG.png"/></a>
-
-					</article>
-
-		    	<h4 >À venir :</h4>
-		      <p><em>Node.JS, Angular2, Vue.js, Symfony</em></p>
+				<div id="one" class="rubDiv">
+					<h2>Compétences</h2>
+					<h3>Opérationnel sur :</h3>
+					<div class="logoSkills" id="skills1">
+							<a title="HTML5" href="https://www.w3.org/html/" target="_blank" class="devicon-html5-plain-wordmark colored"></a>
+				      <a title="CSS3" href="https://www.w3.org/Style/CSS/" target="_blank" class="devicon-css3-plain-wordmark colored"></a>
+							<a title="JavaScript" href="https://js.org/" target="_blank" class="devicon-javascript-plain colored"></a>
+							<a title="jQuery" href="https://jquery.com/" target="_blank" class="devicon-jquery-plain-wordmark colored"></a>
+							<a title="PHP" href="http://www.php.net/" target="_blank" class="devicon-php-plain colored"></a>
+							<a title="Atom" href="https://atom.io/" target="_blank" class="devicon-atom-original colored"></a>
+					</div>
+					<div class="logoSkills">
+						<a title="Bootstrap" href="http://getbootstrap.com/" target="_blank" class="devicon-bootstrap-plain colored"></a>
+						<a title="Git" href="https://git-scm.com/" target="_blank" class="devicon-git-plain colored"></a>
+						<a title="GitHub" href="https://github.com/" target="_blank" class="devicon-github-plain colored"></a>
+						<a title="MySQL" href="https://www.mysql.fr/" target="_blank" class="devicon-mysql-plain colored"></a>
+						<a title="PHPStorm" href="https://www.jetbrains.com/phpstorm/" target="_blank" class="devicon-phpstorm-plain colored"></a>
+						<a title="Linux" href="https://www.linuxfoundation.org/" target="_blank" class="devicon-linux-plain colored"></a>
+					</div>
+					    	<h4 >Je me forme sur :</h4>
+					<div class="logoSkills">
+							<a title="Node.JS" href="https://nodejs.org/en/" target="_blank" class="devicon-nodejs-plain colored"></a>
+				      <a title="C++" href="https://isocpp.org/" target="_blank" class="devicon-cplusplus-plain colored"></a>
+							<a title="d3.js" href="https://d3js.org/" target="_blank" class="devicon-d3js-plain colored"></a>
+							<a title="React" href="https://facebook.github.io/react/" target="_blank" class="devicon-react-original colored"></a>
+							<a title="Sass" href="http://sass-lang.com/" target="_blank" class="devicon-sass-original colored"></a>
+							<a title="Symfony" href="https://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a>
+					</div>
 				</div>
 
 				<!-- DIV EXPERIENCE -->
 
-				<div id="two">
+				<div id="two" class="rubDiv">
 					<h2 >Expérience</h2>
 					<table>
 						<tr>
@@ -134,7 +143,7 @@
 
 				<!-- DIV FORMATION -->
 
-				<div id="three">
+				<div id="three" class="rubDiv">
 					<h2 >Formation</h2>
 						<table>
 							<tr>
@@ -168,7 +177,7 @@
 
 				<!-- DIV A PROPOS -->
 
-				<div id="four">
+				<div id="four" class="rubDiv">
 					<h2>À propos</h2>
 						</br>
 						<table>
@@ -190,7 +199,7 @@
 
 				<!-- DIV MENTIONS -->
 
-				<div id="five">
+				<div id="five" class="rubDiv">
 					<h2>Mentions légales</h2>
 					<p class="credits">
 						Créateur et propriétaire : Nabil Ghedjati
@@ -207,7 +216,7 @@
 
 				<!-- DIV CONTACT -->
 
-				<div id="six">
+				<div id="six" class="rubDiv">
 
 					<h2>Contact</h2>
 

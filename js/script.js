@@ -8,41 +8,51 @@ function neutreForm() { // Supprimer les couleurs du formulaire
 
 var flex = {"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"};
 
+var displayed = false;
+
 function display() {
+	displayed = true;
 	$('#grandTitre').animate({fontSize: "2em", color: "rgba(0,0,0,0)"}, function(){
 		$('#entrance').fadeOut('slow', function(){
-			$('.navbar').fadeIn('slow',function(){
-				$('#rubrique').slideDown(700, function () {
-					$('#welcome').fadeIn('slow', function () {
-						$("#hw").typed({
-										strings: ["Hello world.<span id='cursor'>█</span>"],
-										typeSpeed: 0,
-										contenttype: "text",
-										showCursor: false
-									});
-					});
+			$('.navbar').fadeIn('slow');
+			$('#rubrique').slideDown(700, function () {
+				$('#welcome').fadeIn('slow', function () {
+					$("#hw").typed({
+									strings: ["Hello world.<span id='cursor'>█</span>"],
+									typeSpeed: 0,
+									contenttype: "text",
+									showCursor: false
+								});
 				}).css(flex);
-			});
+			}).css(flex);
 		});
 	});
 }
 
-if (window.matchMedia("(min-width: 1025px)").matches) {
+function actionCommune(bouton) {
+	$(".navbar li a").removeClass("actif");
+	$(bouton).addClass("actif");
+	$(".rubDiv").css("display","none");
+}
+
 	$(document).ready(function() {
 
 		$("#grandTitre").fadeIn(1100, function () {
 			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
 		});
 
-		$('#grandTitre').click(function () {
-			display();
-		});
+		if (displayed == false) {
 
-		$('body').keypress(function (e) {
-			if (e.which == 13 || e.which == 32) {
-				display();
-			}
-		});
+			$('#grandTitre').click(function () {
+					display();
+			});
+
+			$('body').keypress(function (e) {
+				if (e.which == 13 || e.which == 32) {
+					display();
+				}
+			});
+		}
 
 		setInterval(function () {
 			$("#cursor").fadeTo(0,0).delay(600).fadeTo(0,1);
@@ -50,59 +60,50 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
 
 		$("#button0").click(function() {
 			$(".navbar li a").removeClass("actif");
-			$("div").css("display","none");
+			$(".rubDiv").css("display","none");
 			$("#rubrique").animate({height:"270px"});
 			$("#welcome").fadeIn("slow").css(flex);
 		});
 		$("#button1").click(function() {
-			$(".navbar li a").removeClass("actif");
-			$("#button1").addClass("actif");
-			$("div").css("display","none");
-			$("#rubrique").animate({height:"330px",padding:"30px"});
+			actionCommune(this);
+			$("#rubrique").animate({height:"500px"});
 			$("#one").fadeIn("slow").css(flex);
 		});
 		$("#button2").click(function() {
-			$(".navbar li a").removeClass("actif");
-			$("#button2").addClass("actif");
-			$("div").css("display","none");
-			$("#rubrique").animate({height:"456px",padding:"30px"});
+			actionCommune(this);
+
+			$("#rubrique").animate({height:"456px"});
 			$("#two").fadeIn("slow").css(flex);
 		});
 		$("#button3").click(function() {
-			$(".navbar li a").removeClass("actif");
-			$("#button3").addClass("actif");
-			$("div").css("display","none");
+			actionCommune(this);
+
 			$("#three").fadeIn("slow").css(flex);
-			$("#rubrique").animate({height:"488px",padding:"30px"});
+			$("#rubrique").animate({height:"488px"});
 
 		});
 		$("#button4").click(function() {
-			$(".navbar li a").removeClass("actif");
-			$("#button4").addClass("actif");
-			$("div").css("display","none");
+			actionCommune(this);
+
 			$("#four").fadeIn("slow").css(flex);
-			$("#rubrique").animate({height:"350px",padding:"30px"});
+			$("#rubrique").animate({height:"350px"});
 		});
 		$("#legallink").click(function(){
 			$(".navbar li a").removeClass("actif");
-			$("div").css("display","none");
+			$(".rubDiv").css("display","none");
 			$("#five").fadeIn("slow").css(flex);
-			$("#rubrique").animate({height:"326px",padding:"30px"});
+			$("#rubrique").animate({height:"300px"});
 		});
 
 		$(".fa-envelope").click(function(){
-			$(".navbar li a").removeClass("actif");
-			$(".fa-envelope").addClass("actif").css("border-bottom-right-radius","0");
-			$("div").css("display","none");
+			actionCommune(this);
+			$(this).css("border-bottom-right-radius","0");
 			$("#six").fadeIn("slow").css(flex);
-			$("#rubrique").animate({height:"480px",padding:"30px"});
 			$("#form").css(flex);
+			$("#rubrique").animate({height:"480px"});
 			$("form input, textarea").val("");
 			$('#reponseMsg').hide(); // je masque l'éventuelle réponse ajax affichée
 			neutreForm();
-
 		});
 
 	});
-
-}

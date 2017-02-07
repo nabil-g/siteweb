@@ -103,11 +103,6 @@ noscript{
 }
 
 
-#menu {
-    display: none;
-}
-
-
 /*Marges intérieures des cellules du tableau invisible */
 
 td {
@@ -115,42 +110,9 @@ td {
     text-align: left;
 }
 
-
-/*Dimensions des images illustrant les compétences*/
-
-img {
-    width: 100px;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    -webkit-transition: 0.5s ease;
-    transition: 0.5s ease;
-}
-
-img:hover{
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
-}
-
-
-/*Dimensions spéciales pour le logo CSS*/
-
-#csslogo {
-    width: 76px;
-}
-
-#arduinologo {
-    width: 150px;
-}
-
-#JSlogo {
-    width: 80px;
-}
-
 td em {
     font-size: 0.95em;
 }
-
-
 
 
 /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
@@ -161,7 +123,7 @@ td em {
     display: none;
 }
 
-.navbar li #button0 {
+#button0 {
     font-family: 'Satisfy', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
@@ -170,7 +132,7 @@ td em {
     transition: all 0.5s;
 }
 
-.navbar li #button0:hover {
+#button0:hover {
     color: #D180C0;
 }
 
@@ -242,6 +204,12 @@ td em {
     z-index: -1;
 }
 
+#welcome{
+  height: 66%;
+  width: 100%;
+  display: none;
+}
+
 #one, #two, #three, #four, #five, #six {
     height: 100%;
     width: 100%;
@@ -256,13 +224,9 @@ td em {
     margin: auto;
 }
 
-#welcome * {
-  margin: 10px;
-}
-
 
 .logoSkills {
-  width: 100%;
+  width: 80%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -278,19 +242,16 @@ td em {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+            font-size: 4.5em;
+            list-style-type: none;
 }
 
-.logoSkills a{
-  margin: 0;
+
+
+#skills1{
+  /*width: 50%;*/
 }
 
-#welcome {
-    display: none;
-}
-
-#one{
-  width: 100%;
-}
 
 
 #hw {
@@ -298,7 +259,7 @@ td em {
     color: white;
 }
 
-#downloadlink {
+.downloadlink {
     text-decoration: none;
     text-align: center;
     background-color: blue;
@@ -313,7 +274,7 @@ td em {
     transition: all 0.5s;
 }
 
-#downloadlink:hover {
+.downloadlink:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
