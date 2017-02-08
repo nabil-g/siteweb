@@ -254,9 +254,13 @@ td em {
 
 
 
-#hw {
+.hw {
     font-family: 'Inconsolata', sans-serif;
     color: white;
+}
+
+#hwMobile{
+  display: none;
 }
 
 .downloadlink {

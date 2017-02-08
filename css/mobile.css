@@ -26,11 +26,32 @@
     .navbar li a:hover {
         color: none;
     }
-    .rubrique {
+    #rubrique {
         background: 0;
         box-shadow: none;
         padding: 10px;
         display: block;
+        height: auto;
+    }
+
+    #rubrique::before{
+      background: 0;
+    }
+
+    #welcome{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    #hwDesktop{
+      display: none;
+    }
+
+    #hwMobile{
+      display: block;
     }
 
 }
@@ -50,7 +71,7 @@
         border-radius: 5px;
     }
 
-    .rubrique {
+    #rubrique {
         width: 100%;
         height: 100%;
         padding: 10px;

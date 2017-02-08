@@ -17,8 +17,8 @@ function display() {
 			$('.navbar').fadeIn('slow');
 			$('#rubrique').slideDown(700, function () {
 				$('#welcome').fadeIn('slow', function () {
-					$("#hw").typed({
-									strings: ["Hello world.<span id='cursor'>█</span>"],
+					$("#hwDesktop").typed({
+									strings: ["Hello world.<span class='cursor'>█</span>"],
 									typeSpeed: 0,
 									contenttype: "text",
 									showCursor: false
@@ -37,25 +37,27 @@ function actionCommune(bouton) {
 
 	$(document).ready(function() {
 
-		$("#grandTitre").fadeIn(1100, function () {
-			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
-		});
 
-		if (displayed == false) {
-
-			$('#grandTitre').click(function () {
-					display();
+			$("#grandTitre").fadeIn(1100, function () {
+				$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
 			});
 
-			$('body').keypress(function (e) {
-				if (e.which == 13 || e.which == 32) {
-					display();
-				}
-			});
-		}
+			if (displayed == false) {
+
+				$('#grandTitre').click(function () {
+						display();
+				});
+
+				$('body').keypress(function (e) {
+					if (e.which == 13 || e.which == 32) {
+						display();
+					}
+				});
+			}
+
 
 		setInterval(function () {
-			$("#cursor").fadeTo(0,0).delay(600).fadeTo(0,1);
+			$(".cursor").fadeTo(0,0).delay(600).fadeTo(0,1);
 		},1200);
 
 		$("#button0").click(function() {
@@ -104,6 +106,14 @@ function actionCommune(bouton) {
 			$("form input, textarea").val("");
 			$('#reponseMsg').hide(); // je masque l'éventuelle réponse ajax affichée
 			neutreForm();
+		});
+
+		$(document).ajaxStart(function () {
+
+		});
+
+		$(document).ajaxComplete(function () {
+
 		});
 
 	});

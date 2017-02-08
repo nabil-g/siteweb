@@ -7,7 +7,7 @@ function envoi(cible) {
 		url: 'php/contact_bis.php', // l'adresse de la page de réception
 		data: $(cible).serialize(), // on sérialise toutes les données entrées dans le formulaire pour les envoyer
 		success: function(data) { // en cas de succés
-			$('.sixbloc form').hide();
+			$('#six form').hide();
 			$('.sixbloc').prepend(data); // on remplace le formulaire par les données reçues
 			$('#reponseMsg').fadeIn();
 			$(".rubrique").animate({height:"250px",padding:"30px"});

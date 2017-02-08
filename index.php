@@ -60,9 +60,6 @@
 				</header>
 			<!-- SECTION RUBRIQUE -->
 
-			<noscript>
-				Ce site nécessite l'activation de JavaScript.
-			</noscript>
 
 
 			<section id="rubrique">
@@ -70,7 +67,8 @@
 					<!-- DIV WELCOME -->
 
 				<div id="welcome" class="rubDiv">
-					<h2 id="hw" ></h2>
+					<h2 class="hw" id="hwDesktop"></h2>
+					<h2 class="hw" id="hwMobile">Hello world.<span class='cursor'>█</span></h2>
 					<p id="msg">Bienvenue ! Je suis un jeune étudiant actuellement en reconversion dans le monde du Web,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
 					<p><a class="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
@@ -148,8 +146,8 @@
 						<table>
 							<tr>
 								<td class="date">2016/2017</td>
-								<td><strong>Formation CODA by Simplon</strong></br>
-									<em>AFPA, Alès</em>
+								<td><strong>Simplon.co</strong></br>
+									<em>Labélisée Grande école du numérique</em>
 								</td>
 							</tr>
 							<tr>
