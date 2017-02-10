@@ -8,26 +8,6 @@ function neutreForm() { // Supprimer les couleurs du formulaire
 
 var flex = {"display": "flex", "flex-direction": "column", "justify-content": "center", "align-items": "center"};
 
-var displayed = false;
-
-function display() {
-	displayed = true;
-	$('#grandTitre').animate({fontSize: "2em", color: "rgba(0,0,0,0)"}, function(){
-		$('#entrance').fadeOut('slow', function(){
-			$('.navbar').fadeIn('slow');
-			$('#rubrique').slideDown(700, function () {
-				$('#welcome').fadeIn('slow', function () {
-					$("#hwDesktop").typed({
-									strings: ["Hello world.<span class='cursor'>█</span>"],
-									typeSpeed: 0,
-									contenttype: "text",
-									showCursor: false
-								});
-				}).css(flex);
-			}).css(flex);
-		});
-	});
-}
 
 function actionCommune(bouton) {
 	$(".navbar li a").removeClass("actif");
@@ -38,23 +18,28 @@ function actionCommune(bouton) {
 	$(document).ready(function() {
 
 
-			$("#grandTitre").fadeIn(1100, function () {
-				$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
+		$("#grandTitre").fadeIn(1100, function () {
+			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
+		});
+
+
+		$('#grandTitre').click(function () {
+			$('#grandTitre').animate({fontSize: "2em", color: "rgba(0,0,0,0)"}, function(){
+				$('#entrance').fadeOut('slow', function(){
+					$('.navbar').fadeIn('slow');
+					$('#rubrique').slideDown(700, function () {
+						$('#welcome').fadeIn('slow', function () {
+							$("#hwDesktop").typed({
+								strings: ["Hello world.<span class='cursor'>█</span>"],
+								typeSpeed: 0,
+								contenttype: "text",
+								showCursor: false
+							});
+						}).css(flex);
+					}).css(flex);
+				});
 			});
-
-			if (displayed == false) {
-
-				$('#grandTitre').click(function () {
-						display();
-				});
-
-				$('body').keypress(function (e) {
-					if (e.which == 13 || e.which == 32) {
-						display();
-					}
-				});
-			}
-
+		});
 
 		setInterval(function () {
 			$(".cursor").fadeTo(0,0).delay(600).fadeTo(0,1);
@@ -108,12 +93,5 @@ function actionCommune(bouton) {
 			neutreForm();
 		});
 
-		$(document).ajaxStart(function () {
-
-		});
-
-		$(document).ajaxComplete(function () {
-
-		});
 
 	});

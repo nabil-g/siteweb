@@ -17,6 +17,7 @@
 		<meta name="keywords" content="developer,web,dev,développeur,CSS,HTML,JS,PHP,simplon,coda,codeur,internet,informatique">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/pace.min.js"></script>
 		<script src="js/jquery.color.js"></script>
 		<script src="js/typed.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
@@ -27,23 +28,16 @@
 	<body>
 
 		<!-- TITRE À CACHER -->
-
-
-
 		<section id="entrance">
 			<h1 id="grandTitre"><a href="#">Nabil.Ghedjati</a></h1>
-			<noscript>
+			<noscript id="noscriptDesktop">
 				Ce site nécessite l'activation de JavaScript.
 				<p><a class="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
 			</noscript>
 		</section>
 
-
 		<main>
-
-
 			<!-- HEADER -->
-
 				<header>
 		    	<ul class="navbar">
 						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
@@ -58,10 +52,8 @@
 						<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
 					</ul>
 				</header>
+
 			<!-- SECTION RUBRIQUE -->
-
-
-
 			<section id="rubrique">
 
 					<!-- DIV WELCOME -->
@@ -72,6 +64,9 @@
 					<p id="msg">Bienvenue ! Je suis un jeune étudiant actuellement en reconversion dans le monde du Web,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
 					<p><a class="downloadlink" href="assets/cv_nabil_ghedjati.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
+					<noscript>
+						Ce site nécessite l'activation de JavaScript.
+					</noscript>
 				</div>
 
 				<!-- DIV COMPETENCES -->
@@ -99,7 +94,6 @@
 					<div class="logoSkills">
 							<a title="Node.JS" href="https://nodejs.org/en/" target="_blank" class="devicon-nodejs-plain colored"></a>
 				      <a title="C++" href="https://isocpp.org/" target="_blank" class="devicon-cplusplus-plain colored"></a>
-							<a title="d3.js" href="https://d3js.org/" target="_blank" class="devicon-d3js-plain colored"></a>
 							<a title="React" href="https://facebook.github.io/react/" target="_blank" class="devicon-react-original colored"></a>
 							<a title="Sass" href="http://sass-lang.com/" target="_blank" class="devicon-sass-original colored"></a>
 							<a title="Symfony" href="https://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a>
@@ -218,6 +212,7 @@
 
 					<h2>Contact</h2>
 
+						<p id="reponseMsg"></p>
 						<form id="form" name="contactform" accept-charset="UTF-8" onsubmit="return verifForm(this)" method="POST">
 							<input type="text" id="name" name="name" placeholder="Votre nom" autofocus value="">
 							<input type="email" id="mailaddress" name="mailaddress" placeholder="Votre adresse e-mail" value=""  >
