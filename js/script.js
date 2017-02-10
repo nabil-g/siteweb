@@ -93,5 +93,13 @@ function actionCommune(bouton) {
 			neutreForm();
 		});
 
+		$(document).ajaxStart(function () {
+			$('#sendbutton').addClass('ajaxloading');
+		});
+
+		$(document).ajaxComplete(function () {
+			$('#sendbutton').removeClass('ajaxloading');
+		});
+
 
 	});

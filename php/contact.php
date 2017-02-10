@@ -2,7 +2,6 @@
 
           include 'db.php';
 
-
         //RECUPERATION DES DONNEES DU FORMULAIRE DE CONTACT
         // Pour info :
         // La fonction strip_tags permet d'effacer les balises HTML qui pourraient être injectés par l'utilisateur.
