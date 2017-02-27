@@ -89,6 +89,7 @@
 						<a title="MySQL" href="https://www.mysql.fr/" target="_blank" class="devicon-mysql-plain colored"></a>
 						<a title="PHPStorm" href="https://www.jetbrains.com/phpstorm/" target="_blank" class="devicon-phpstorm-plain colored"></a>
 						<a title="Linux" href="https://www.linuxfoundation.org/" target="_blank" class="devicon-linux-plain colored"></a>
+						<a title="Apache Cordova" href="https://cordova.apache.org/" target="_blank"><img src="pict/cordova_64.png" alt="Cordova Icon" /></a>
 					</div>
 					    	<h4 >Je me forme sur :</h4>
 					<div class="logoSkills">
@@ -214,7 +215,7 @@
 
 						<p id="reponseMsg"></p>
 						<form id="form" name="contactform" accept-charset="UTF-8" onsubmit="return verifForm(this)" method="POST">
-							<input type="text" id="name" name="name" placeholder="Votre nom" autofocus value="">
+							<input type="text" id="name" name="name" placeholder="Votre nom" value="">
 							<input type="email" id="mailaddress" name="mailaddress" placeholder="Votre adresse e-mail" value=""  >
 							<textarea id="message" type="text" name="message" rows="6" placeholder="Votre message (entre 2 et 1500 caractères)" value=""></textarea>
 							<p id="erreurForm">
