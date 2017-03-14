@@ -94,8 +94,8 @@
 					    	<h4 >Je me forme sur :</h4>
 					<div class="logoSkills">
 							<a title="Node.JS" href="https://nodejs.org/en/" target="_blank" class="devicon-nodejs-plain colored"></a>
-				      <a title="C++" href="https://isocpp.org/" target="_blank" class="devicon-cplusplus-plain colored"></a>
-							<a title="React" href="https://facebook.github.io/react/" target="_blank" class="devicon-react-original colored"></a>
+				      <a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img src="pict/arduino.svg" alt="Arduino Icon" style="width:58px" /></a>
+							<a title="Vue.js" href="https://vuejs.org/" target="_blank"><img src="pict/vuejs.png" alt="Vue.js Icon" style="width:80px"/></a>
 							<a title="Sass" href="http://sass-lang.com/" target="_blank" class="devicon-sass-original colored"></a>
 							<a title="Symfony" href="https://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a>
 					</div>
