@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="assets/favicon.png">
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/styles.min.css">
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1", user-scalable=no>
@@ -227,14 +227,14 @@
 
 			</section>
 		</main>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="lib/pace.min.js"></script>
 		<script src="lib/jquery.color.js"></script>
 		<script src="lib/typed.js"></script>
 		<script src="lib/googleanalytics.js"></script>
 
-<script src="js/main.js"></script>
+<script src="js/main.min.js"></script>
 	</body>
 
 </html>

@@ -21,11 +21,21 @@ gulp.task('useref', function () {
 
 // copier les fichiers qui n'ont pas besoin de changement
 gulp.task('noChange', function () {
-  return gulp.src(['src/+(assets|error|php|lib)/**','src/*.css'])
+  return gulp.src(['src/+(assets|error|php|lib)/**','!src/assets/*.jpg','src/*.css'])
   .pipe(gulp.dest('dist'));
 });
 
+// compresser les jpeg
+gulp.task('compressJpg', function () {
+  return gulp.src('src/assets/*.jpg')
+    .pipe(plugins.cache(plugins.imagemin([
+      plugins.imagemin.jpegtran({progressive:true})
+    ])))
+    .pipe(gulp.dest('dist/assets/'));
+});
+
+
 // exécuter des taches, d'abord clean:dist puis useref et noChange en meme temps
 gulp.task('default', function () {
-  runSequence(['useref','noChange']);
+  runSequence(['useref','compressJpg','noChange']);
 });

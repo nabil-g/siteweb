@@ -9,7 +9,7 @@
 		<link rel="icon" type="image/png" href="assets/favicon.png">
 		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
-		<!-- build:css  css/styles.css -->
+		<!-- build:css  css/styles.min.css -->
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 		<link type="text/css" rel="stylesheet" href="css/mobile.css">
 		<!-- endbuild -->
@@ -230,14 +230,14 @@
 
 			</section>
 		</main>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="lib/pace.min.js"></script>
 		<script src="lib/jquery.color.js"></script>
 		<script src="lib/typed.js"></script>
 		<script src="lib/googleanalytics.js"></script>
 
-<!-- build:js js/main.js-->
+<!-- build:js js/main.min.js-->
 		<script type="text/javascript" src="js/script.js"></script>
 		<script type="text/javascript" src="js/form.js"></script>
 <!-- endbuild -->
