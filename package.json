@@ -30,9 +30,11 @@
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
     "gulp-clean-css": "^3.4.1",
     "gulp-if": "^2.0.2",
     "gulp-license": "^1.1.0",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.2",
     "pump": "^1.0.2",

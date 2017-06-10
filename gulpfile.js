@@ -1,25 +1,21 @@
 const gulp = require('gulp');
-const useref = require('gulp-useref');
-const uglify = require('gulp-uglify');
-const gulpIf = require('gulp-if');
-const cleanCSS = require('gulp-clean-css');
-const license = require('gulp-license');
+var plugins = require('gulp-load-plugins')();
 const del = require('del');
 const runSequence = require('run-sequence');
 
+console.dir(plugins); // pour récuperer le nom des plugins dans l'objet plugins
+
 // vider le dossier dist sauf le sous-dossier assets
 gulp.task('clean:dist', function () {
-  del(['dist/**/*', '!dist/assets', '!dist/assets/*']);
+  del(['dist/**/*', 'dist/*','!dist/assets', '!dist/assets/*']);
 });
 
 // concatener les fichiers sources dans l'index.html
 gulp.task('useref', function () {
   return gulp.src('src/*.php')
-    .pipe(gulpIf('*.js',uglify())) // minifier seulement les scripts js
-    .pipe(gulpIf('*.css',cleanCSS({compatibility: 'ie8'}))) // minifier seulement les scripts js
-    .pipe(useref())
-    .pipe(gulpIf('*.js', license('MIT', {tiny:false})))
-    .pipe(gulpIf('*.css', license('MIT', {tiny:false})))
+    .pipe(plugins.useref())
+    .pipe(plugins.if('*.js',plugins.uglify())) // minifier seulement les scripts js
+    .pipe(plugins.if('*.css',plugins.cleanCss({compatibility: 'ie8'}))) // minifier seulement les scripts css
     .pipe(gulp.dest('dist'));
 });
 
