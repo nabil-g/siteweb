@@ -13,4 +13,4 @@ npm install
 
 ### License
 
-[MIT](https://github.com/nabil-g/siteweb/blob/master/LICENSE.md)
+[MIT](LICENSE.md)
