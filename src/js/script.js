@@ -15,10 +15,9 @@ function actionCommune(bouton) {
 	$(".rubDiv").css("display","none");
 }
 
-	$(document).ready(function() {
+$(document).ready(function() {
 
-
-		$("#grandTitre").fadeIn(1100, function () {
+		$("#grandTitre").fadeIn('slow', function () {
 			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
 		});
 
@@ -26,17 +25,15 @@ function actionCommune(bouton) {
 		$('#grandTitre').click(function () {
 			$('#grandTitre').animate({fontSize: "2em", color: "rgba(0,0,0,0)"}, function(){
 				$('#entrance').fadeOut('slow', function(){
-					$('.navbar').fadeIn('slow');
+					$('.navbar').fadeIn('slow').css("display","flex");
 					$('#rubrique').slideDown(700, function () {
-						$('#welcome').fadeIn('slow', function () {
 							$("#hwDesktop").typed({
 								strings: ["Hello world.<span class='cursor'>█</span>"],
 								typeSpeed: 0,
 								contenttype: "text",
 								showCursor: false
 							});
-						}).css(flex);
-					}).css(flex);
+					}).css("display","flex");
 				});
 			});
 		});

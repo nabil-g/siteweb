@@ -134,7 +134,9 @@ td em {
     list-style-type: none;
     overflow: hidden;
     display: none;
+    justify-content: space-between;
 }
+
 
 #button0 {
     font-family: 'Satisfy', sans-serif;
@@ -152,20 +154,16 @@ td em {
 
 /*Elements de navigation sous forme de liste*/
 
-#button0, #button1, #button2, #button3 {
-    float: left;
-}
-
-#twitter, #mail, #about, #insta, #linkedin, #emaillink, #github {
-    float: right;
-}
-
 
 /*Liens de la barre de navigation et liens du paragraphe*/
 
-.navbar li a {
-    display: inline-block;
-    text-align: center;
+
+.navbar span {
+  display: flex;
+}
+
+.navbar span li a {
+    display: block;
     padding: 12px 14px;
     color: black;
     -webkit-transition: all 0.5s;
@@ -199,6 +197,9 @@ td em {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #rubrique:before {
@@ -221,7 +222,10 @@ td em {
 #welcome{
   height: 66%;
   width: 100%;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #one, #two, #three, #four, #five, #six {
@@ -313,7 +317,7 @@ td em {
 }
 
 input, textarea {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .4);
     color: white;
     border: 0px;
     padding: 5px;
@@ -401,26 +405,28 @@ input:focus, textarea:focus {
     transition: 0.5s;
 }
 
+@media screen and (min-width:1025px) {
 
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
+  .pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-.pace-inactive {
-  display: none;
-}
+  .pace-inactive {
+    display: none;
+  }
 
-.pace .pace-progress {
-  background: #29d;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 2px;
+  .pace .pace-progress {
+    background: #29d;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+  }
 }

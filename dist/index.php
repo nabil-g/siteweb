@@ -34,16 +34,21 @@
 			<!-- HEADER -->
 				<header>
 		    	<ul class="navbar">
-						<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
-						<li><a id="button1" href="#">Compétences</a></li>
-						<li><a id="button2" href="#">Expérience</a></li>
-						<li><a id="button3" href="#">Formation</a></li>
-						<li class="right" id="mail"><a title="Contact" class="fa fa-envelope" href="#"></a></li>
-						<li class="right" id="twitter"><a title="Twitter" class="fa fa-twitter"  href="https://twitter.com/Nabil63" target="_blank"></a></li>
-						<li class="right" id="insta"><a title="Instagram" class="fa fa-instagram" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
-						<li class="right" id="linkedin"><a title="LinkedIn" class="fa fa-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
-						<li class="right" id="github"><a title="GitHub" class="fa fa-github" href="https://github.com/nabil-g" target="_blank"></a></li>
-						<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
+						<span class="leftLinks">
+							<li><a title="Accueil" id="button0" href="#">Nabil.Ghedjati</a></li>
+							<li><a id="button1" href="#">Compétences</a></li>
+							<li><a id="button2" href="#">Expérience</a></li>
+							<li><a id="button3" href="#">Formation</a></li>
+						</span>
+
+						<span class="rightLinks">
+							<li class="right" id="about"><a id="button4" href="#">À propos</a></li>
+							<li class="right" id="github"><a title="GitHub" class="fa fa-github" href="https://github.com/nabil-g" target="_blank"></a></li>
+							<li class="right" id="linkedin"><a title="LinkedIn" class="fa fa-linkedin" href="https://www.linkedin.com/in/nabil-ghedjati-5051a2117" target="_blank"></a></li>
+							<li class="right" id="insta"><a title="Instagram" class="fa fa-instagram" href="https://www.instagram.com/nabil.ghedjati/" target="_blank"></a></li>
+							<li class="right" id="twitter"><a title="Twitter" class="fa fa-twitter"  href="https://twitter.com/Nabil63" target="_blank"></a></li>
+							<li class="right" id="mail"><a title="Contact" class="fa fa-envelope" href="#"></a></li>
+						</span>
 					</ul>
 				</header>
 
@@ -55,7 +60,7 @@
 				<div id="welcome" class="rubDiv">
 					<h2 class="hw" id="hwDesktop"></h2>
 					<h2 class="hw" id="hwMobile">Hello world.<span class='cursor'>█</span></h2>
-					<p id="msg">Bienvenue ! Je suis un jeune étudiant actuellement en reconversion dans le monde du Web,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
+					<p id="msg">Bienvenue ! Je suis un jeune <strong>développeur Web</strong> de <?php echo (date('Y') - 1992); ?> ans,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
 					<p><a class="downloadlink" href="assets/cv_nabil_ghedjati_2017.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
 					<noscript>
@@ -91,7 +96,7 @@
 				      <a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img src="assets/arduino.svg" alt="Arduino Icon" style="width:58px" /></a>
 							<a title="Vue.js" href="https://vuejs.org/" target="_blank"><img src="assets/vuejs.png" alt="Vue.js Icon" style="width:80px"/></a>
 							<a title="Sass" href="http://sass-lang.com/" target="_blank" class="devicon-sass-original colored"></a>
-							<a title="Symfony" href="https://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a>
+							<!-- <a title="Symfony" href="https://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a> -->
 					</div>
 				</div>
 
@@ -181,7 +186,7 @@
 							 </td>
 							</tr>
 						</table>
-						<p class="credits">Ce site a été entièrement codé par moi-même.</br></br>&copy; <?php echo date('Y'); ?> Nabil Ghedjati.   <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
+						<p class="credits">&copy; <?php echo date('Y'); ?> Nabil Ghedjati.  <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
 				</div>
 
 				<!-- DIV MENTIONS -->
