@@ -36,6 +36,6 @@ gulp.task('compressJpg', function () {
 
 
 // exécuter des taches, d'abord clean:dist puis useref et noChange en meme temps
-gulp.task('build', function () {
+gulp.task('default', ['clean:dist'] ,function () {
   runSequence(['useref','compressJpg','noChange']);
 });

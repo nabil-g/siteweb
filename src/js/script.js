@@ -15,7 +15,7 @@ function actionCommune(bouton) {
 	$(".rubDiv").css("display","none");
 }
 
-$(document).ready(function() {
+$(window).load(function() {
 
 		$("#grandTitre").fadeIn('slow', function () {
 			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
