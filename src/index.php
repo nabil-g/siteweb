@@ -142,6 +142,11 @@
 					<h2 >Formation</h2>
 						<table>
 							<tr>
+								<td class="date">2017/2018</td>
+								<td><strong>EPSI Lyon</strong></br>
+									<em>Bachelor Informatique 3ème année</em>
+								</td>
+							</tr>							<tr>
 								<td class="date">2016/2017</td>
 								<td><strong>Simplon.co</strong></br>
 									<em>Labélisée Grande école du numérique</em>
