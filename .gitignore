@@ -5,6 +5,5 @@ src/.idea/
 .idea/
 *.log
 *.swp
-yarn.lock
 *.iml
 package-lock.json
