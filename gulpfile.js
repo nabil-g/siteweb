@@ -12,7 +12,7 @@ gulp.task('clean:dist', function () {
 
 // concatener les fichiers sources dans l'index.html
 gulp.task('useref', function () {
-  return gulp.src('src/*.php')
+  return gulp.src('src/index.html')
     .pipe(plugins.useref())
     .pipe(plugins.if('*.js',plugins.uglify())) // minifier seulement les scripts js
     .pipe(plugins.if('*.css',plugins.cleanCss({compatibility: 'ie8'}))) // minifier seulement les scripts css
