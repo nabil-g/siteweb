@@ -2,9 +2,10 @@
 
 // Déclaration d'une fonction d'envoi en utilisant ajax
 function envoi(cible) {
+	var path = $(cible).attr("action");
 	$.ajax({
 		method: 'POST', // On indique le type de requete http
-		url: 'php/contact.php', // l'adresse de la page de réception
+		url: (typeof path != "undefined" ? path : "/none" ), // l'adresse de la page de réception
 		data: $(cible).serialize(), // on sérialise toutes les données entrées dans le formulaire pour les envoyer
 		success: function(data) { // en cas de succés
 			$('#six form').hide();
@@ -13,8 +14,7 @@ function envoi(cible) {
 			$("#rubrique").animate({height:"250px"});
 		},
 		error: function(){ // en cas d'erreur
-
-		alert('La requête n\'a pas aboutie !');
+			alert('La requête n\'a pas aboutie !');
 		}
 	});
 }

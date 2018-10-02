@@ -17,6 +17,14 @@ function actionCommune(bouton) {
 
 $(window).load(function() {
 
+		var year = (new Date()).getFullYear();
+		$("#age").text(year-1992);
+
+		$("#credits").html('&copy;  ' + year + " Nabil Ghedjati.");
+		$("#legalCredits").text(year);
+		$("#aboutCredits").text(year);
+
+
 		$("#grandTitre").fadeIn('slow', function () {
 			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
 		});
@@ -62,14 +70,14 @@ $(window).load(function() {
 		$("#button2").click(function() {
 			actionCommune(this);
 
-			$("#rubrique").animate({height:"456px"});
+			$("#rubrique").animate({height:"380px"});
 			$("#two").fadeIn("slow").css(flex);
 		});
 		$("#button3").click(function() {
 			actionCommune(this);
 
 			$("#three").fadeIn("slow").css(flex);
-			$("#rubrique").animate({height:"488px"});
+			$("#rubrique").animate({height:"470px"});
 
 		});
 		$("#button4").click(function() {
@@ -82,7 +90,7 @@ $(window).load(function() {
 			$(".navbar li a").removeClass("actif");
 			$(".rubDiv").css("display","none");
 			$("#five").fadeIn("slow").css(flex);
-			$("#rubrique").animate({height:"300px"});
+			$("#rubrique").animate({height:"230px"});
 		});
 
 		$(".fa-envelope").click(function(){

@@ -63,7 +63,7 @@
 				<div id="welcome" class="rubDiv">
 					<h2 class="hw" id="hwDesktop"></h2>
 					<h2 class="hw" id="hwMobile">Hello world.<span class='cursor'>█</span></h2>
-					<p id="msg">Bienvenue ! Je suis un jeune <strong>développeur Web</strong> de <?php echo (date('Y') - 1992); ?> ans,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
+					<p id="msg">Bienvenue ! Je suis un jeune <strong>développeur Web</strong> de <span id="age"></span> ans,</br> plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter.
 					</p>
 					<p><a class="downloadlink" href="assets/cv_nabil_ghedjati_2017.pdf" type="application/pdf" target="_blank">Télécharger le CV</a></p>
 					<noscript>
@@ -75,39 +75,40 @@
 
 				<div id="one" class="rubDiv">
 					<h2>Compétences</h2>
-					<h3>Opérationnel sur :</h3>
 					<div class="logoSkills" id="skills1">
 							<a title="HTML5" href="https://www.w3.org/html/" target="_blank" class="devicon-html5-plain-wordmark colored"></a>
 				      <a title="CSS3" href="https://www.w3.org/Style/CSS/" target="_blank" class="devicon-css3-plain-wordmark colored"></a>
 							<a title="JavaScript" href="https://js.org/" target="_blank" class="devicon-javascript-plain colored"></a>
 							<a title="jQuery" href="https://jquery.com/" target="_blank" class="devicon-jquery-plain-wordmark colored"></a>
 							<a title="PHP" href="http://www.php.net/" target="_blank" class="devicon-php-plain colored"></a>
-							<a title="Atom" href="https://atom.io/" target="_blank" class="devicon-atom-original colored"></a>
 					</div>
 					<div class="logoSkills">
-						<a title="Bootstrap" href="http://getbootstrap.com/" target="_blank" class="devicon-bootstrap-plain colored"></a>
 						<a title="Git" href="https://git-scm.com/" target="_blank" class="devicon-git-plain colored"></a>
-						<a title="GitHub" href="https://github.com/" target="_blank" class="devicon-github-plain colored"></a>
 						<a title="MySQL" href="https://www.mysql.fr/" target="_blank" class="devicon-mysql-plain colored"></a>
-						<a title="PHPStorm" href="https://www.jetbrains.com/phpstorm/" target="_blank" class="devicon-phpstorm-plain colored"></a>
 						<a title="Linux" href="https://www.linuxfoundation.org/" target="_blank" class="devicon-linux-plain colored"></a>
-						<a title="Apache Cordova" href="https://cordova.apache.org/" target="_blank"><img src="assets/cordova_64.png" alt="Cordova Icon" /></a>
+						<a title="Apache Cordova" href="https://cordova.apache.org/" target="_blank"><img src="assets/cordova_64.png" alt="Cordova Icon"/></a>
+						<a title="Elm" href="http://elm-lang.org/" target="_blank"><img src="assets/elm_logo.png" alt="Elm Icon" style="width:60px;"/></a>
 					</div>
-					    	<h4 >Je me forme sur :</h4>
 					<div class="logoSkills">
 							<a title="Node.JS" href="https://nodejs.org/en/" target="_blank" class="devicon-nodejs-plain colored"></a>
-				      <a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img src="assets/arduino.svg" alt="Arduino Icon" style="width:58px" /></a>
+				      		<a title="Arduino" href="https://www.arduino.cc/" target="_blank"><img src="assets/arduino.svg" alt="Arduino Icon" style="width:58px" /></a>
 							<a title="Vue.js" href="https://vuejs.org/" target="_blank" class="devicon-vuejs-plain colored"></a>
 							<a title="Sass" href="http://sass-lang.com/" target="_blank" class="devicon-sass-original colored"></a>
-							<!-- <a title="Symfony" href="htts://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a> -->
+							<a title="Symfony" href="htts://symfony.com/" target="_blank" class="devicon-symfony-original colored"></a>
 					</div>
 				</div>
 
 				<!-- DIV EXPERIENCE -->
 
 				<div id="two" class="rubDiv">
-					<h2 >Expérience</h2>
+					<h2>Expérience</h2>
 					<table>
+						<tr>
+							<td class="date">Depuis septembre 2017</td>
+							<td>Développeur web</br>
+								<em>Spottt</em>
+							</td>
+						</tr>
 						<tr>
 							<td class="date">Juillet 2014</td>
 							<td>Auxiliaire d'été</br>
@@ -119,18 +120,6 @@
 							<td>Stagiaire (pendant 17 semaines non consécutives)</br>
 								<em>Caisse d'Épargne Auvergne-Limousin, agence de Thiers</br>
 								Société Générale, agences de Beaumont et Thiers</em>
-							</td>
-						</tr>
-						<tr>
-							<td class="date">Été 2012</td>
-							<td>Manutentionnaire (par intérim)</br>
-								<em>Brüggen France (céréales)</em>
-							</td>
-						</tr>
-						<tr>
-							<td class="date">Été 2009/été 2010</td>
-							<td>Agent d'entretien</br>
-								<em>La Rayonnante (services d’entretien)</em>
 							</td>
 						</tr>
 					</table>
@@ -165,13 +154,6 @@
 									<em>Lycée Ambroise Brugière, CLERMONT-FERRAND</em>
 								</td>
 							</tr>
-							<tr>
-								<td class="date">2008 / 2010</td>
-								<td><strong>Baccalauréat Sciences et Technologies de la Gestion</br>
-									spécialité Comptabilité et Finance d'entreprise</strong></br>
-									<em>Lycée Montdory, THIERS</em>
-								</td>
-							</tr>
 						</table>
 				</div>
 
@@ -194,7 +176,7 @@
 							 </td>
 							</tr>
 						</table>
-						<p class="credits">&copy; <?php echo date('Y'); ?> Nabil Ghedjati.  <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
+						<p class="credits">&copy; <span id="aboutCredits"></span> Nabil Ghedjati.  <a id="legallink" href="#"><strong>Mentions légales</strong></a></p>
 				</div>
 
 				<!-- DIV MENTIONS -->
@@ -203,14 +185,10 @@
 					<h2>Mentions légales</h2>
 					<p class="credits">
 						Créateur et propriétaire : Nabil Ghedjati
-					</br>Ce site est hébergé par <a href="https://shost.ca/" target="_blank">sHost.ca</a>, Nouveau-Brunswick &amp; Québec, Canada.
-						</br>Il fonctionne de manière optimale sur les navigateurs Chrome et Firefox.
-						</br>
-						</br>The PHP logo is Copyright &copy; 2001-<?php echo date('Y'); ?> the PHP Group. All rights reserved.
-						</br>The jQuery logo is Copyright &copy; <?php echo date('Y'); ?> The jQuery Foundation.
+					</br>Hébergé par <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 						</br>Crédits photo : <a href="https://unsplash.com/photos/Y1ByvAGQ5iE" target="_blank">Unsplash.com</a>
 						</br>
-						</br>&copy; <?php echo date('Y'); ?> Nabil Ghedjati.
+						</br>&copy; <span id="legalCredits"></span> Nabil Ghedjati.
 					</p>
 				</div>
 
@@ -221,7 +199,7 @@
 					<h2>Contact</h2>
 
 						<p id="reponseMsg"></p>
-						<form id="form" name="contactform" accept-charset="UTF-8" onsubmit="return verifForm(this)" method="POST">
+						<form id="form" name="contactform" accept-charset="UTF-8" onsubmit="return verifForm(this)" method="POST" netlify>
 							<input type="text" id="name" name="name" placeholder="Votre nom" value="">
 							<input type="email" id="mailaddress" name="mailaddress" placeholder="Votre adresse e-mail" value=""  >
 							<textarea id="message" type="text" name="message" rows="6" placeholder="Votre message (entre 2 et 1500 caractères)" value=""></textarea>
@@ -232,9 +210,7 @@
 							<button id="sendbutton" type="submit" name="send">Envoyer</button>
 						</form>
 
-					<p class="credits">
-						&copy; <?php echo date('Y'); ?> Nabil Ghedjati.
-					</p>
+					<p class="credits" id="credits"></p>
 
 				</div>
 
