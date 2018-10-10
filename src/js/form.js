@@ -2,14 +2,15 @@
 
 // Déclaration d'une fonction d'envoi en utilisant ajax
 function envoi(cible) {
-	var path = $(cible).attr("action");
+	var name = $('#name').val();
 	$.ajax({
 		method: 'POST', // On indique le type de requete http
-		url: (typeof path != "undefined" ? path : "/none" ), // l'adresse de la page de réception
+		url: "FORM_ENDPOINT", // l'adresse de la page de réception
 		data: $(cible).serialize(), // on sérialise toutes les données entrées dans le formulaire pour les envoyer
-		success: function(data) { // en cas de succés
+        dataType: "json",
+        success: function(data) { // en cas de succès
 			$('#six form').hide();
-			$('#reponseMsg').text(data); // on remplace le formulaire par les données reçues
+			$('#reponseMsg').text("Merci pour votre message " + name + " !"); // on remplace le formulaire par les données reçues
 			$('#reponseMsg').fadeIn();
 			$("#rubrique").animate({height:"250px"});
 		},

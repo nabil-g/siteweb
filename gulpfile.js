@@ -1,9 +1,13 @@
 const gulp = require('gulp');
-var plugins = require('gulp-load-plugins')();
+const plugins = require('gulp-load-plugins')();
 const del = require('del');
 const runSequence = require('run-sequence');
+const replace = require('gulp-replace');
 
 console.dir(plugins); // pour récuperer le nom des plugins dans l'objet plugins
+
+const formEndpoint = process.env.FORM_ENDPOINT || '';
+
 
 // vider le dossier dist sauf le sous-dossier assets
 gulp.task('clean:dist', function () {
@@ -15,6 +19,7 @@ gulp.task('useref', function () {
   return gulp.src('src/index.html')
     .pipe(plugins.useref())
     .pipe(plugins.if('*.js',plugins.uglify())) // minifier seulement les scripts js
+    .pipe(plugins.if('*.js',plugins.replace('FORM_ENDPOINT', formEndpoint)))
     .pipe(plugins.if('*.css',plugins.cleanCss({compatibility: 'ie8'}))) // minifier seulement les scripts css
     .pipe(gulp.dest('dist'));
 });
