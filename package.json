@@ -36,6 +36,7 @@
     "gulp-imagemin": "^3.3.0",
     "gulp-license": "^1.1.0",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.2",
     "gulp-webserver": "^0.9.1",
