@@ -29,11 +29,6 @@ $(window).load(function() {
 			$('#entrance').animate({backgroundColor: "rgba(0,0,0,0.6)"}, 1500);
 		});
 
-		$('#grandTitre').hover(function () {
-			$(this).animate({fontSize: '6em'}, 'fast');
-		}, function () {
-			$(this).animate({fontSize: '5em'}, 'fast');
-		});
 
 
 		$('#grandTitre').click(function () {
