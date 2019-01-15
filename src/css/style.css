@@ -81,6 +81,10 @@ body {
     font-size: 5em;
 }
 
+#grandTitre:hover{
+    font-size: 6em;
+}
+
 #grandTitre a, #petitTitre a {
     color: #D180C0;
     -webkit-transition: all 0.5s;
