@@ -272,6 +272,11 @@ td em {
     color: white;
 }
 
+#hwDesktop{
+    text-align: left;
+    margin: initial;
+}
+
 #hwMobile{
   display: none;
 }
