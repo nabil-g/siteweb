@@ -32,9 +32,11 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
           filename: "index.html"
         }),
 
-        //new StyleLintPlugin(),
+        new StyleLintPlugin(),
 
-        new CopyWebpackPlugin([{ from: "src/assets/favicon.png" }])
+        new CopyWebpackPlugin([{ from: "src/assets", to: "assets" }]),
+
+        new CopyWebpackPlugin([{ from: "src/css/" }])
       ]
     },
     modeConfig(mode),

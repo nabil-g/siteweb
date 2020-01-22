@@ -2,51 +2,51 @@
 /*RESET CSS*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-::-webkit-scrollbar
-{
-    width: 8px;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-
- ::-moz-selection {
-    background-color: black;
-    color: yellow;
+::-moz-selection {
+  background-color: black;
+  color: yellow;
 }
 
- ::selection {
-    background-color: black;
-    color: yellow;
+::selection {
+  background-color: black;
+  color: yellow;
 }
 
-:focus {outline:none;}
-::-moz-focus-inner {border:0;}
-
+:focus {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0;
+}
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
-
 
 /*Corps du site, arrière-plan, police générale*/
 
 body {
-    background: no-repeat url("../assets/clouds2.jpg") fixed;
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1em;
+  /* background: no-repeat url("clouds2.jpg") fixed; */
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
 }
 
-#noscriptDesktop{
+#noscriptDesktop {
   color: white;
   display: flex;
   flex-direction: column;
@@ -55,175 +55,166 @@ body {
   height: 50px;
 }
 
-
 #entrance {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 1);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: ease;
-    transition: ease;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: ease;
+  transition: ease;
 }
-
 
 #grandTitre {
-    display: none;
-    font-family: 'Satisfy', sans-serif;
-    font-size: 5em;
+  display: none;
+  font-family: "Satisfy", sans-serif;
+  font-size: 5em;
 }
 
-#grandTitre:hover{
-    font-size: 6em;
+#grandTitre:hover {
+  font-size: 6em;
 }
 
-#grandTitre a, #petitTitre a {
-    color: #D180C0;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-animation: animtitre 5s infinite;
-            animation: animtitre 5s infinite;
+#grandTitre a,
+#petitTitre a {
+  color: #d180c0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-animation: animtitre 5s infinite;
+  animation: animtitre 5s infinite;
 }
-
 
 @-webkit-keyframes animtitre {
-    from {
-        color: #61AFFC;
-    }
-    50% {
-        color: #009999;
-    }
-    to {
-        color: #61AFFC;
-    }
+  from {
+    color: #61affc;
+  }
+  50% {
+    color: #009999;
+  }
+  to {
+    color: #61affc;
+  }
 }
-
 
 @keyframes animtitre {
-    from {
-        color: #61AFFC;
-    }
-    50% {
-        color: #009999;
-    }
-    to {
-        color: #61AFFC;
-    }
+  from {
+    color: #61affc;
+  }
+  50% {
+    color: #009999;
+  }
+  to {
+    color: #61affc;
+  }
 }
-
 
 /*Marges intérieures des cellules du tableau invisible */
 
 td {
-    padding: 15px;
-    text-align: left;
+  padding: 15px;
+  text-align: left;
 }
 
 td em {
-    font-size: 0.95em;
+  font-size: 0.95em;
 }
-
 
 /*Barre de navigation (sous forme de liste), sans marges externes et internes, transparente*/
 
 .navbar {
-    list-style-type: none;
-    overflow: hidden;
-    display: none;
-    justify-content: space-between;
+  list-style-type: none;
+  overflow: hidden;
+  display: none;
+  justify-content: space-between;
 }
 
-
 #button0 {
-    font-family: 'Satisfy', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #B0FAFF;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  font-family: "Satisfy", sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #b0faff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #button0:hover {
-    color: #D180C0;
+  color: #d180c0;
 }
-
 
 /*Elements de navigation sous forme de liste*/
 
-
 /*Liens de la barre de navigation et liens du paragraphe*/
-
 
 .navbar span {
   display: flex;
 }
 
 .navbar span li a {
-    display: block;
-    padding: 12px 14px;
-    color: black;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  display: block;
+  padding: 12px 14px;
+  color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .navbar .actif {
-    color: white;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-    background: rgba(0, 0, 0, .5);
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+  color: white;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .navbar li a:hover {
-    color: white;
+  color: white;
 }
 
 #rubrique {
-    position: relative;
-    padding: 30px;
-    height: 270px;
-    width: 960px;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 17vh;
-    margin-bottom: 3vh;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  padding: 30px;
+  height: 270px;
+  width: 960px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 17vh;
+  margin-bottom: 3vh;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #rubrique:before {
-    content: '';
-    background: url("../assets/clouds2.jpg") no-repeat fixed;
-    background-size: cover;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -ms-filter: blur(5px);
-    -o-filter: blur(5px);
-    filter: blur(5px);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+  content: "";
+  background: url("../assets/clouds2.jpg") no-repeat fixed;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
-#welcome{
+#welcome {
   height: 66%;
   width: 100%;
   display: flex;
@@ -232,190 +223,192 @@ td em {
   align-items: center;
 }
 
-#one, #two, #three, #four, #five, #six {
-    height: 100%;
-    width: 100%;
-    display: none;
+#one,
+#two,
+#three,
+#four,
+#five,
+#six {
+  height: 100%;
+  width: 100%;
+  display: none;
 }
-
 
 /*C'est pour espacer chaque element des div sauf le dernier*/
 
-
 #rubrique div * {
-    margin: auto;
+  margin: auto;
 }
-
 
 .logoSkills {
   width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-            font-size: 4.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 4.5em;
 }
 
 .hw {
-    font-family: 'Inconsolata', sans-serif;
-    color: white;
+  font-family: "Inconsolata", sans-serif;
+  color: white;
 }
 
-#hwDesktop{
-    text-align: left;
-    margin: initial;
+#hwDesktop {
+  text-align: left;
+  margin: initial;
 }
 
-#hwMobile{
+#hwMobile {
   display: none;
 }
 
 .downloadlink {
-    text-decoration: none;
-    text-align: center;
-    background-color: blue;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    -webkit-animation: animDl 5s infinite;
-            animation: animDl 5s infinite;
-    padding: 8px 25px;
-    margin-top: 10px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  text-decoration: none;
+  text-align: center;
+  background-color: blue;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  -webkit-animation: animDl 5s infinite;
+  animation: animDl 5s infinite;
+  padding: 8px 25px;
+  margin-top: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-
 @-webkit-keyframes animDl {
-    from {
-        background: #61AFFC;
-    }
-    50% {
-        background: #009999;
-    }
-    to {
-        background: #61AFFC;
-    }
+  from {
+    background: #61affc;
+  }
+  50% {
+    background: #009999;
+  }
+  to {
+    background: #61affc;
+  }
 }
 
 @keyframes animDl {
-    from {
-        background: #61AFFC;
-    }
-    50% {
-        background: #009999;
-    }
-    to {
-        background: #61AFFC;
-    }
+  from {
+    background: #61affc;
+  }
+  50% {
+    background: #009999;
+  }
+  to {
+    background: #61affc;
+  }
 }
 
 .credits {
-    font-size: 0.90em;
+  font-size: 0.9em;
 }
 
-input, textarea {
-    background-color: rgba(0, 0, 0, .4);
-    color: white;
-    border: 0px;
-    padding: 5px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 1em;
-    width: 50%;
-    resize: none;
-    font-size: 0.90em;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
-    outline: none;
+input,
+textarea {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 0px;
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  width: 50%;
+  resize: none;
+  font-size: 0.9em;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  outline: none;
 }
 
-form{
+form {
   height: 100%;
   width: 100%;
 }
 
 textarea {
-    height: 200px;
+  height: 200px;
 }
-
 
 input {
-    height: 30px;
+  height: 30px;
 }
 
-input:focus, textarea:focus {
-    background-color: rgba(0, 0, 0, 0.3);
+input:focus,
+textarea:focus {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #erreurForm {
-    display: none;
-    font-size: 0.9em;
-    font-style: italic;
+  display: none;
+  font-size: 0.9em;
+  font-style: italic;
 }
 
 #okForm {
-    height: 17px;
+  height: 17px;
 }
 
 #reponseMsg {
-    display: none;
+  display: none;
 }
 
 #sendbutton {
-    border: 0;
-    background-color: blue;
-    color: white;
-    height: 30px;
-    width: 100px;
-    font-size: 1em;
-    border-radius: 3px;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-    margin: 0 auto;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+  border: 0;
+  background-color: blue;
+  color: white;
+  height: 30px;
+  width: 100px;
+  font-size: 1em;
+  border-radius: 3px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
-.ajaxloading{
+.ajaxloading {
   animation: animSend 0.6s infinite;
 }
 
 @keyframes animSend {
-    from {
-        background: #13E3E3;
-    }
-    50% {
-        background: #009999;
-    }
-    to {
-        background: #13E3E3;
-    }
+  from {
+    background: #13e3e3;
+  }
+  50% {
+    background: #009999;
+  }
+  to {
+    background: #13e3e3;
+  }
 }
 
-.downloadlink:hover, #sendbutton:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.downloadlink:hover,
+#sendbutton:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #sendbutton:focus {
-    background-color: #006666;
-    color: #66ffff;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+  background-color: #006666;
+  color: #66ffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-@media screen and (min-width:1025px) {
-
+@media screen and (min-width: 1025px) {
   .pace {
     -webkit-pointer-events: none;
     pointer-events: none;

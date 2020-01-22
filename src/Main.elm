@@ -1,37 +1,34 @@
 module Main exposing (main)
 
 import Browser exposing (Document)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Http
 import Task
 import Time
 
 
 type alias Model =
-    { zone : Time.Zone
-    , time : Time.Posix
-    }
+    ()
 
 
 initialModel : Int -> ( Model, Cmd Msg )
 initialModel time =
-    ( Model Time.utc <| Time.millisToPosix time
-    , Task.perform AdjustTimeZone Time.here
+    ( ()
+    , Cmd.none
     )
 
 
 type Msg
-    = AdjustTimeZone Time.Zone
-    | Tick Time.Posix
+    = NoOp
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        AdjustTimeZone zone ->
-            ( { model | zone = zone }, Cmd.none )
-
-        Tick posix ->
-            ( { model | time = posix }, Cmd.none )
+        NoOp ->
+            ( model, Cmd.none )
 
 
 main : Program Int Model Msg
@@ -39,18 +36,20 @@ main =
     Browser.document
         { init = initialModel
         , update = update
-        , view = view
+        , view =
+            \model ->
+                { title = "Site de Nabil Ghedjati"
+                , body = [ view model ]
+                }
         , subscriptions = subscriptions
         }
 
 
-view : Model -> Document Msg
+view : Model -> Html Msg
 view model =
-    { title = "Site de Nabil Ghedjati"
-    , body = []
-    }
+    text "Ceci est un test"
 
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Time.every 1000 Tick
+    Sub.none
