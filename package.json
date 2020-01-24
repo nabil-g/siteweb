@@ -78,6 +78,6 @@
     "elm-analyse": "elm-analyse -s -o",
     "preprod": "rimraf dist",
     "lint": "stylelint src/assets/styles",
-    "dev": "npm run webpack-dev-server -- --env.mode development"
+    "dev": "rimraf elm-stuff/ && npm run webpack-dev-server -- --env.mode development"
   }
 }
