@@ -1,9 +1,15 @@
 module Main exposing (main)
 
 import Browser exposing (Document)
-import Html exposing (..)
-import Html.Attributes as HA exposing (..)
-import Html.Events as HE exposing (..)
+import Element exposing (..)
+import Element.Background as Background
+import Element.Border as Border
+import Element.Events exposing (..)
+import Element.Font as Font
+import Element.Input as Input
+import Html
+import Html.Attributes as HA
+import Html.Events as HE
 import Http
 import Task
 import Time
@@ -40,17 +46,13 @@ type Page
 
 
 type Msg
-    = NoOp
-    | Enter
+    = Enter
     | GoTo Page
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        NoOp ->
-            ( model, Cmd.none )
-
         Enter ->
             ( { model | pageState = Page Home }, Cmd.none )
 
@@ -66,7 +68,7 @@ main =
         , view =
             \model ->
                 { title = "Site de Nabil Ghedjati"
-                , body = view model
+                , body = [ layout [ Font.family [ Font.typeface "Raleway", Font.sansSerif ] ] <| view model ]
                 }
         , subscriptions = subscriptions
         }
@@ -77,185 +79,240 @@ subscriptions model =
     Sub.none
 
 
-view : Model -> List (Html Msg)
+view : Model -> Element Msg
 view model =
     case model.pageState of
         Landing ->
-            [ section [ id "entrance" ]
-                [ h1 [ id "grandTitre", onClick Enter ]
-                    [ text "Nabil.Ghedjati"
-                    ]
-                ]
-            ]
+            el [ width fill, height fill ] <|
+                el [ centerX, centerY, onClick Enter, Font.size 80, Font.bold, pointer ] <|
+                    text "Nabil.Ghedjati"
 
         Page currentPage ->
-            let
-                btnAttr page =
-                    if page == currentPage then
-                        class "actif"
+            column [ width fill, height fill ]
+                [ viewHeader currentPage
+                , el [] <|
+                    case currentPage of
+                        Home ->
+                            column []
+                                [ paragraph []
+                                    [ text "Hello world."
+                                    , el [ htmlAttribute <| HA.class "cursor" ] <| text "█"
+                                    ]
 
-                    else
-                        onClick <| GoTo page
-            in
-            [ header []
-                [ ul [ class "navbar" ]
-                    [ span [ class "leftLinks" ]
-                        [ li []
-                            [ a
-                                [ href "#"
-                                , id "button0"
-                                , title "Accueil"
-                                , onClick <| GoTo Home
+                                --, paragraph [ htmlAttribute <| HA.class "hw",htmlAttribute <| HA.id"hwMobile" ] [ text "Hello world.", el [ htmlAttribute <| HA.class "cursor" ] [ text "█" ] ]
+                                , paragraph []
+                                    [ text "Bienvenue ! Je suis un jeune"
+                                    , el [ Font.bold ] <| text "développeur Web"
+                                    , text "de ans"
+                                    , text "plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter."
+                                    ]
+                                , newTabLink []
+                                    { url = "assets/cv_nabil_ghedjati_2017.pdf"
+                                    , label = text "Télécharger le CV"
+                                    }
                                 ]
-                                [ text "Nabil.Ghedjati" ]
-                            ]
-                        , li [] [ a [ href "#", id "button1", btnAttr Skills ] [ text "Compétences" ] ]
-                        , li [] [ a [ href "#", id "button2", btnAttr Xp ] [ text "Expérience" ] ]
-                        , li [] [ a [ href "#", id "button3", btnAttr Education ] [ text "Formation" ] ]
-                        ]
-                    , span [ class "rightLinks" ]
-                        [ li [ class "right", id "about", btnAttr About ] [ a [ href "#", id "button4" ] [ text "À propos" ] ]
-                        , li [ class "right", id "github" ] [ a [ class "fa fa-github", href "https://github.com/nabil-g", target "_blank", title "GitHub" ] [] ]
-                        , li [ class "right", id "linkedin" ] [ a [ class "fa fa-linkedin", href "https://www.linkedin.com/in/nabil-ghedjati-5051a2117", target "_blank", title "LinkedIn" ] [] ]
-                        , li [ class "right", id "insta" ] [ a [ class "fa fa-instagram", href "https://www.instagram.com/nabil.ghedjati/", target "_blank", title "Instagram" ] [] ]
-                        , li [ class "right", id "twitter" ] [ a [ class "fa fa-twitter", href "https://twitter.com/Nabil63", target "_blank", title "Twitter" ] [] ]
-                        , li [ class "right", id "mail" ] [ a [ class "fa fa-envelope", href "#", title "Contact", btnAttr Contact ] [] ]
-                        ]
+
+                        Skills ->
+                            let
+                                devicon title picto =
+                                    el [ htmlAttribute <| HA.title title, htmlAttribute <| HA.class <| "colored devicon-" ++ picto ] none
+                            in
+                            column [ htmlAttribute <| HA.class "rubcolumn", htmlAttribute <| HA.id "one" ]
+                                [ el [] <| text "Compétences"
+                                , row []
+                                    [ newTabLink [] { url = "https://www.w3.org/html/", label = devicon "HTML5" "html5-plain-wordmark" }
+                                    , newTabLink [] { url = "https://www.w3.org/Style/CSS/", label = devicon "CSS3" "css3-plain-wordmark" }
+                                    , newTabLink [] { url = "https://js.org/", label = devicon "JavaScript" "javascript-plain" }
+                                    , newTabLink [] { url = "https://jquery.com/", label = devicon "jQuery" "jquery-plain-wordmark" }
+                                    , newTabLink [] { url = "http://www.php.net/", label = devicon "PHP" "php-plain" }
+                                    ]
+                                , row []
+                                    [ newTabLink [] { url = "https://git-scm.com/", label = devicon "Git" "git-plain" }
+                                    , newTabLink [] { url = "https://www.mysql.fr/", label = devicon "MySQL" "mysql-plain" }
+                                    , newTabLink [] { url = "https://www.linuxfoundation.org/", label = devicon "Linux" "linux-plain" }
+                                    , newTabLink [] { url = "https://cordova.apache.org/", label = image [ htmlAttribute <| HA.title "Apache Cordova" ] { src = "assets/cordova_64.png", description = "Cordova Icon" } }
+                                    , newTabLink [] { url = "http://elm-lang.org/", label = image [ htmlAttribute <| HA.title "Elm", width <| px 60 ] { src = "assets/elm_logo.png", description = "Elm Icon" } }
+                                    ]
+                                , row []
+                                    [ newTabLink [] { url = "https://nodejs.org/en/", label = devicon "Node.JS" "nodejs-plain" }
+                                    , newTabLink [] { url = "https://www.arduino.cc/", label = image [ htmlAttribute <| HA.title "Arduino", width <| px 58 ] { src = "assets/arduino.svg", description = "Arduino Icon" } }
+                                    , newTabLink [] { url = "https://vuejs.org/", label = devicon "Vue.js" "vuejs-plain" }
+                                    , newTabLink [] { url = "http://sass-lang.com/", label = devicon "Sass" "sass-original" }
+                                    , newTabLink [] { url = "https://symfony.com/", label = devicon "Symfony" "symfony-original" }
+                                    ]
+                                ]
+
+                        Xp ->
+                            column []
+                                [ el [] <| text "Expérience"
+                                , column []
+                                    [ row []
+                                        [ el [] <| text "Depuis septembre 2017" ]
+                                        , el [] <|  text "Développeur web"
+                                        , el [] <|  text "Spottt"
+                                        ]
+                                    , row []
+                                        [ el [] <|  text "Juillet 2014"
+                                        , el [] <| text "Auxiliaire d'été"
+                                        , el [] <| text "Société Générale, agence de Thiers"
+                                        ]
+                                    , row []
+                                        [ el [] <|  text "Années scolaires 2012/2014"
+                                        , el [] <|  text "Stagiaire (pendant 17 semaines non consécutives)"
+                                        , el [] <|  text "Caisse d'Épargne Auvergne-Limousin, agence de Thiers"
+                                        , el [] <| text "Société Générale, agences de Beaumont et Thiers"
+                                        ]
+                                    ]
+                                ]
+
+                        Education ->
+                            column [ htmlAttribute <| HA.id "three", htmlAttribute <| HA.class "rubcolumn" ]
+                                [el [] <|  text "Formation"
+                                 column []
+                                         [ row []
+                                                                         [ el [] <| text "2017/2018"
+                                         , td [] [ strong [] [ text "EPSI Lyon", br [] [], em [] [ text "Bachelor Informatique 3ème année" ] ] ]
+                                         , tr [] [ td [ htmlAttribute <| HA.class "date" ] [ text "2016/2017" ], td [] [ strong [] [ text "Simplon.co", br [] [], em [] [ text "Labélisée Grande école du numérique" ] ] ] ]
+                                         , tr [] [ td [ htmlAttribute <| HA.class "date" ] [ text "2014/2015" ], td [] [ strong [] [ text "Licence Pro Management des collectivités territoriales" ], br [] [], text "(formation uniquement)", br [] [], em [] [ text "Université d'Auvergne, CLERMONT-FERRAND" ] ] ]
+                                         , tr [] [ td [ htmlAttribute <| HA.class "date" ] [ text "2012 / 2014" ], td [] [ strong [] [ text "BTS Banque Option Marché des Particuliers", br [] [], em [] [ text "Lycée Ambroise Brugière, CLERMONT-FERRAND" ] ] ] ]
+                                         ]
+                                     ]
+                                ]
+
+                        About ->
+                            column [ htmlAttribute <| HA.id "four", htmlAttribute <| HA.class "rubcolumn" ]
+                                [--paragraph [] [ text "À propos" ]
+                                 --, br [] []
+                                 --, table []
+                                 --    [ tr []
+                                 --        [ td [ htmlAttribute <| HA.class "date" ]
+                                 --            [ text "Langues"
+                                 --            ]
+                                 --        , td []
+                                 --            [ text "Français (langue maternelle)"
+                                 --            , br [] []
+                                 --            , text "Anglais (courant)"
+                                 --            ]
+                                 --        ]
+                                 --    , tr []
+                                 --        [ td [ htmlAttribute <| HA.class "date" ]
+                                 --            [ text "Centres d'intérêts"
+                                 --            ]
+                                 --        , td []
+                                 --            [ text "Cinéma, nouvelles technologies, sports de montagne,"
+                                 --            , br [] []
+                                 --            , text "tennis, photographie, musique"
+                                 --            ]
+                                 --        ]
+                                 --    ]
+                                 --, paragraph[ htmlAttribute <| HA.class "credits" ]
+                                 --    [ text "&copy; "
+                                 --    , el [htmlAttribute <| HA.id"aboutCredits" ] []
+                                 --    , text "Nabil Ghedjati. "
+                                 --    , newTabLink [htmlAttribute <| HA.id"legallink", url ="#" ]
+                                 --        [ strong [] [ text "Mentions légales" ]
+                                 --        ]
+                                 --    ]
+                                ]
+
+                        Legal ->
+                            column [ htmlAttribute <| HA.id "five", htmlAttribute <| HA.class "rubcolumn" ]
+                                [-- paragraph [] [ text "Mentions légales" ]
+                                 --, paragraph[ htmlAttribute <| HA.class "credits" ]
+                                 --    [ text "Créateur et propriétiare : Nabil Ghedjati"
+                                 --    , br [] []
+                                 --    , text "Hébergé par "
+                                 --    , newTabLink [ url ="https://www.netlify.com/", target "_blank" ] [ text "Unsplash.com" ]
+                                 --    , br [] []
+                                 --    , br [] []
+                                 --    , text "&copy; "
+                                 --    , el [htmlAttribute <| HA.id"legalCredits" ] []
+                                 --    , text "Nabil Ghedjati."
+                                 --    ]
+                                ]
+
+                        Contact ->
+                            column [ htmlAttribute <| HA.id "six", htmlAttribute <| HA.class "rubcolumn" ]
+                                [--paragraph [] [ text "Contact" ]
+                                 --, paragraph[htmlAttribute <| HA.id"reponseMsg" ] []
+                                 --, Html.form [htmlAttribute <| HA.id"form", name "contactForm" ]
+                                 --    [ input
+                                 --        [ type_ "text"
+                                 --        , placeholder "Votre nom"
+                                 --        , value ""
+                                 --        ]
+                                 --        []
+                                 --    , input
+                                 --        [ type_ "email"
+                                 --        , placeholder "Votre adresse e-mail"
+                                 --        , value ""
+                                 --        ]
+                                 --        []
+                                 --    , textarea
+                                 --        [ rows 6
+                                 --        , placeholder "Votre message (entre 2 et 1500 caractères)"
+                                 --        ]
+                                 --        []
+                                 --    , paragraph[htmlAttribute <| HA.id"erreurForm" ]
+                                 --        [ text "Les champs marqués en rouge sont incomplets ou incorrects."
+                                 --        ]
+                                 --    , paragraph[htmlAttribute <| HA.id"okForm" ] []
+                                 --    , button [htmlAttribute <| HA.id"sendbutton" ]
+                                 --        [ text "Envoyer"
+                                 --        ]
+                                 --    ]
+                                 --, paragraph[ htmlAttribute <| HA.class "credits",htmlAttribute <| HA.id"credits" ] []
+                                ]
+                ]
+
+
+viewHeader : Page -> Element Msg
+viewHeader currentPage =
+    let
+        btn =
+            el [ paddingXY 14 12, Font.color black, pointer ]
+
+        pictoBtn title picto =
+            btn <| el [ htmlAttribute <| HA.class <| "fa fa-" ++ picto, htmlAttribute <| HA.title title ] none
+
+        internalBtn page =
+            el
+                (if page == currentPage then
+                    [ Border.roundEach { topLeft = 0, topRight = 0, bottomRight = 7, bottomLeft = 7 }
+                    , Background.color <| rgba 0 0 0 0.5
+                    , Font.color white
                     ]
-                ]
-            , section [ id "rubrique" ]
-                [ case currentPage of
-                    Home ->
-                        div [ class "rubDiv", id "welcome" ]
-                            [ h2 [ class "hw", id "hwDesktop" ] [ text "Hello world.", span [ class "cursor" ] [ text "█" ] ]
-                            , h2 [ class "hw", id "hwMobile" ] [ text "Hello world.", span [ class "cursor" ] [ text "█" ] ]
-                            , p [ id "msg" ] [ text "Bienvenue ! Je suis un jeune", strong [] [ text "développeur Web" ], text "de ans", br [] [], text "plein d'idées et de motivation. Consultez mon parcours et n'hésitez pas à me contacter." ]
-                            , p [] [ a [ class "downloadlink", href "assets/cv_nabil_ghedjati_2017.pdf", type_ "application/pdf", target "_blank" ] [ text "Télécharger le CV" ] ]
-                            ]
 
-                    Skills ->
-                        div [ class "rubDiv", id "one" ]
-                            [ h2 [] [ text "Compétences" ]
-                            , div [ class "logoSkills", id "skills1" ] [ a [ class "devicon-html5-plain-wordmark colored", href "https://www.w3.org/html/", target "_blank", title "HTML5" ] [], a [ class "devicon-css3-plain-wordmark colored", href "https://www.w3.org/Style/CSS/", target "_blank", title "CSS3" ] [], a [ class "devicon-javascript-plain colored", href "https://js.org/", target "_blank", title "JavaScript" ] [], a [ class "devicon-jquery-plain-wordmark colored", href "https://jquery.com/", target "_blank", title "jQuery" ] [], a [ class "devicon-php-plain colored", href "http://www.php.net/", target "_blank", title "PHP" ] [] ]
-                            , div [ class "logoSkills" ]
-                                [ a [ class "devicon-git-plain colored", href "https://git-scm.com/", target "_blank", title "Git" ] []
-                                , a [ class "devicon-mysql-plain colored", href "https://www.mysql.fr/", target "_blank", title "MySQL" ] []
-                                , a [ class "devicon-linux-plain colored", href "https://www.linuxfoundation.org/", target "_blank", title "Linux" ] []
-                                , a [ href "https://cordova.apache.org/", target "_blank", title "Apache Cordova" ] [ img [ alt "Cordova Icon", src "assets/cordova_64.png" ] [] ]
-                                , a [ href "http://elm-lang.org/", target "_blank", title "Elm" ] [ img [ alt "Elm Icon", src "assets/elm_logo.png", attribute "style" "width:60px;" ] [] ]
-                                ]
-                            , div [ class "logoSkills" ]
-                                [ a [ class "devicon-nodejs-plain colored", href "https://nodejs.org/en/", target "_blank", title "Node.JS" ] []
-                                , a [ href "https://www.arduino.cc/", target "_blank", title "Arduino" ] [ img [ alt "Arduino Icon", src "assets/arduino.svg", attribute "style" "width:58px" ] [] ]
-                                , a [ class "devicon-vuejs-plain colored", href "https://vuejs.org/", target "_blank", title "Vue.js" ] []
-                                , a [ class "devicon-sass-original colored", href "http://sass-lang.com/", target "_blank", title "Sass" ] []
-                                , a [ class "devicon-symfony-original colored", href "https://symfony.com/", target "_blank", title "Symfony" ] []
-                                ]
-                            ]
+                 else
+                    [ onClick <| GoTo page, mouseOver [ Font.color white ] ]
+                )
 
-                    Xp ->
-                        div [ class "rubDiv", id "two" ]
-                            [ h2 [] [ text "Expérience" ]
-                            , table [] [ tr [] [ td [ class "date" ] [ text "Depuis septembre 2017" ], td [] [ text "Développeur web" ], em [] [ text "Spottt" ] ], tr [] [ td [ class "date" ] [ text "Juillet 2014" ], td [] [ text "Auxiliaire d'été" ], em [] [ text "Société Générale, agence de Thiers" ] ], tr [] [ td [ class "date" ] [ text "Années scolaires 2012/2014" ], td [] [ text "Stagiaire (pendant 17 semaines non consécutives)" ], em [] [ text "Caisse d'Épargne Auvergne-Limousin, agence de Thiers" ], text "Société Générale, agences de Beaumont et Thiers" ] ]
-                            ]
-
-                    Education ->
-                        div [ id "three", class "rubDiv" ]
-                            [ h2 [] [ text "Formation" ]
-                            , table []
-                                [ tr []
-                                    [ td [ class "date" ] [ text "2017/2018" ]
-                                    , td [] [ strong [] [ text "EPSI Lyon", br [] [], em [] [ text "Bachelor Informatique 3ème année" ] ] ]
-                                    , tr [] [ td [ class "date" ] [ text "2016/2017" ], td [] [ strong [] [ text "Simplon.co", br [] [], em [] [ text "Labélisée Grande école du numérique" ] ] ] ]
-                                    , tr [] [ td [ class "date" ] [ text "2014/2015" ], td [] [ strong [] [ text "Licence Pro Management des collectivités territoriales" ], br [] [], text "(formation uniquement)", br [] [], em [] [ text "Université d'Auvergne, CLERMONT-FERRAND" ] ] ]
-                                    , tr [] [ td [ class "date" ] [ text "2012 / 2014" ], td [] [ strong [] [ text "BTS Banque Option Marché des Particuliers", br [] [], em [] [ text "Lycée Ambroise Brugière, CLERMONT-FERRAND" ] ] ] ]
-                                    ]
-                                ]
-                            ]
-
-                    About ->
-                        div [ id "four", class "rubDiv" ]
-                            [ h2 [] [ text "À propos" ]
-                            , br [] []
-                            , table []
-                                [ tr []
-                                    [ td [ class "date" ]
-                                        [ text "Langues"
-                                        ]
-                                    , td []
-                                        [ text "Français (langue maternelle)"
-                                        , br [] []
-                                        , text "Anglais (courant)"
-                                        ]
-                                    ]
-                                , tr []
-                                    [ td [ class "date" ]
-                                        [ text "Centres d'intérêts"
-                                        ]
-                                    , td []
-                                        [ text "Cinéma, nouvelles technologies, sports de montagne,"
-                                        , br [] []
-                                        , text "tennis, photographie, musique"
-                                        ]
-                                    ]
-                                ]
-                            , p [ class "credits" ]
-                                [ text "&copy; "
-                                , span [ id "aboutCredits" ] []
-                                , text "Nabil Ghedjati. "
-                                , a [ id "legallink", href "#" ]
-                                    [ strong [] [ text "Mentions légales" ]
-                                    ]
-                                ]
-                            ]
-
-                    Legal ->
-                        div [ id "five", class "rubDiv" ]
-                            [ h2 [] [ text "Mentions légales" ]
-                            , p [ class "credits" ]
-                                [ text "Créateur et propriétiare : Nabil Ghedjati"
-                                , br [] []
-                                , text "Hébergé par "
-                                , a [ href "https://www.netlify.com/", target "_blank" ] [ text "Unsplash.com" ]
-                                , br [] []
-                                , br [] []
-                                , text "&copy; "
-                                , span [ id "legalCredits" ] []
-                                , text "Nabil Ghedjati."
-                                ]
-                            ]
-
-                    Contact ->
-                        div [ id "six", class "rubDiv" ]
-                            [ h2 [] [ text "Contact" ]
-                            , p [ id "reponseMsg" ] []
-                            , Html.form [ id "form", name "contactForm" ]
-                                [ input
-                                    [ type_ "text"
-                                    , placeholder "Votre nom"
-                                    , value ""
-                                    ]
-                                    []
-                                , input
-                                    [ type_ "email"
-                                    , placeholder "Votre adresse e-mail"
-                                    , value ""
-                                    ]
-                                    []
-                                , textarea
-                                    [ rows 6
-                                    , placeholder "Votre message (entre 2 et 1500 caractères)"
-                                    ]
-                                    []
-                                , p [ id "erreurForm" ]
-                                    [ text "Les champs marqués en rouge sont incomplets ou incorrects."
-                                    ]
-                                , p [ id "okForm" ] []
-                                , button [ id "sendbutton" ]
-                                    [ text "Envoyer"
-                                    ]
-                                ]
-                            , p [ class "credits", id "credits" ] []
-                            ]
-                ]
+        link url title picto =
+            newTabLink [] { url = url, label = pictoBtn title picto }
+    in
+    row [ width fill, spaceEvenly ]
+        [ row []
+            [ el [ onClick <| GoTo Home, Font.family [ Font.typeface "Raleway", Font.sansSerif ] ] <| btn <| text "Nabil.Ghedjati"
+            , internalBtn Skills <| btn <| text "Compétences"
+            , internalBtn Xp <| btn <| text "Expérience"
+            , internalBtn Education <| btn <| text "Formation"
             ]
+        , row []
+            [ internalBtn About <| btn <| text "À propos"
+            , link "https://github.com/nabil-g" "GitHub" "github"
+            , link "https://www.linkedin.com/in/nabil-ghedjati-5051a2117" "LinkedIn" "linkedin"
+            , link "https://www.instagram.com/nabil.ghedjati/" "Instagram" "instagram"
+            , link "https://twitter.com/Nabil63" "Twitter" "twitter"
+            , internalBtn Contact <| pictoBtn "Contact" "envelope"
+            ]
+        ]
+
+
+white : Color
+white =
+    rgb255 255 255 255
+
+
+black : Color
+black =
+    rgb255 0 0 0
