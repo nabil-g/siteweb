@@ -40,7 +40,7 @@ a {
 /*Corps du site, arrière-plan, police générale*/
 
 body {
-  /* background: no-repeat url("clouds2.jpg") fixed; */
+  background: no-repeat url("../assets/clouds2.jpg") fixed;
   background-size: cover;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
@@ -59,7 +59,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +74,6 @@ body {
 }
 
 #grandTitre {
-  display: none;
   font-family: "Satisfy", sans-serif;
   font-size: 5em;
 }
@@ -83,8 +82,7 @@ body {
   font-size: 6em;
 }
 
-#grandTitre a,
-#petitTitre a {
+#grandTitre {
   color: #d180c0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -132,8 +130,8 @@ td em {
 .navbar {
   list-style-type: none;
   overflow: hidden;
-  display: none;
   justify-content: space-between;
+  display: flex;
 }
 
 #button0 {
@@ -191,10 +189,10 @@ td em {
   color: white;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 #rubrique:before {
@@ -231,7 +229,6 @@ td em {
 #six {
   height: 100%;
   width: 100%;
-  display: none;
 }
 
 /*C'est pour espacer chaque element des div sauf le dernier*/
